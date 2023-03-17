@@ -70,7 +70,7 @@ public class UnityDemo {
 	}
 	
 	public static void main(String[] args) throws IOException, InterruptedException {
-		 String topic        = "M2MQTT_Unity/test";
+		String topic        = "M2MQTT_Unity/test";
         String content      = "Message from MqttPublishSample";
         int qos             = 2;
         String broker       = "tcp://localhost:1883";
