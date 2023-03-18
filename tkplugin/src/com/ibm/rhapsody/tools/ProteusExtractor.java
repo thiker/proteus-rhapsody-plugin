@@ -1,6 +1,7 @@
 package com.ibm.rhapsody.tools;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.io.File;
 
 import java.io.FileOutputStream;
@@ -42,6 +43,7 @@ public class ProteusExtractor {
 	static int mqttQos = 1;
 	static String mqttBroker = "tcp://localhost:1883";
 	static String mqttClientId = "IBMRhapsody";
+	static Path tempDirPath = null;
 
 	/***
 	 * Generates a message that contains the data of a node.
@@ -49,7 +51,7 @@ public class ProteusExtractor {
 	 * @param node
 	 * @return message with node data
 	 */
-	static void sendNodeDataUpdate(IRPModelElement node) {
+	static void sendNodeDataUpdate(IRPDiagram node) {
 		JSONObject nodeData = new JSONObject();
 		nodeData.put("Id", node.getGUID().toString());
 		nodeData.put("Name", node.getName());
@@ -79,28 +81,28 @@ public class ProteusExtractor {
 	 * @param node
 	 * @return message with node image data
 	 */
-	static void sendNodeImageUpdate(IRPModelElement node) {
-		IRPDiagram diagram = node.getMainDiagram();
+	static void sendNodeImageUpdate(IRPDiagram node) {
+		System.out.println("Processing image update for node "+ node.getDisplayName() + "..");
 		byte[] msgImageContent = new byte[0];
 
-		if (diagram != null) {
+		if (node != null) {
+			System.out.println("Generating diagram image...");
 			IRPCollection imageMaps = irpApp.createNewCollection();
-			String filePath = System.getProperty("java.io.tmpdir").toString() + "/proteus/generated/images/"
-					+ node.getGUID() + ".jpeg";
-
+			Path imgPath = tempDirPath.resolve(node.getGUID() + ".jpeg");
+			
 			// Generate image
-			diagram.getPictureAs(filePath, "JPEG", 1, imageMaps);
-			File fi = new File(filePath);
-
+			node.getPictureAs(imgPath.toString(), "JPEG", 1, imageMaps);
 			// Get image as bytes
 			try {
-				msgImageContent = Files.readAllBytes(fi.toPath());
+				msgImageContent = Files.readAllBytes(imgPath);
+				System.out.println("Image to bytes completed.");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
 		
+		System.out.println("Creating image update message..");
 		// Create message
 		MqttMessage message = new MqttMessage();
 		message.setPayload(msgImageContent);
@@ -109,6 +111,7 @@ public class ProteusExtractor {
 		// Send update
 		try {
 			mqttClient.publish("proteus/data/update/3dml/images/" + node.getGUID().toString(), message);
+			System.out.println("Image update sent of length "+ msgImageContent.length);
 		} catch (MqttPersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -157,7 +160,8 @@ public class ProteusExtractor {
 		IRPCollection allColl = irpPrj.getNestedElementsByMetaClass("ObjectModelDiagram", 1);
 
 		for (int i = 1; i <= allColl.getCount(); i++) {
-			IRPModelElement element = (IRPModelElement) allColl.getItem(i);
+			IRPDiagram element = (IRPDiagram) allColl.getItem(i);
+			System.out.println("Sending update for element" + element.getDisplayName());
 			sendNodeDataUpdate(element);
 			sendNodeImageUpdate(element);
 		}
@@ -167,9 +171,30 @@ public class ProteusExtractor {
 		// Setup IBMRhapsody API
 		irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
 		irpPrj = irpApp.activeProject();
-
+		
+		// Create temp directory
+		tempDirPath = Files.createTempDirectory("proteus");
+		// Delete temp on exit
+	    Runtime.getRuntime().addShutdownHook(new Thread(new Runnable() {
+	        public void run() {
+	        	File directoryToBeDeleted = new File(tempDirPath.toString());
+	    	    File[] allContents = directoryToBeDeleted.listFiles();
+	    	    if (allContents != null) {
+	    	        for (File file : allContents) {
+	    	            file.delete();
+	    	        }
+	    	    }
+	    	    directoryToBeDeleted.delete();
+	        }
+	    }, "Shutdown-thread"));
+		
+		
 		initClient();
 
 		generate();
+		
+		//Exit so that shutdown routine gets called during testing in eclipse
+		System.exit(0);
 	}
+
 }
