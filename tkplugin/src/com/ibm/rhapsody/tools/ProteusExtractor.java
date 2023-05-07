@@ -41,7 +41,7 @@ public class ProteusExtractor {
 	static IRPProject irpPrj;
 	static MqttClient mqttClient;
 	static int mqttQos = 1;
-	static String mqttBroker = "tcp://localhost:1883";
+	static String mqttBroker = "tcp://10.211.55.2:1883";
 	static String mqttClientId = "IBMRhapsody";
 	static Path tempDirPath = null;
 
@@ -53,7 +53,7 @@ public class ProteusExtractor {
 	 */
 	static void sendNodeDataUpdate(IRPDiagram node) {
 		JSONObject nodeData = new JSONObject();
-		nodeData.put("Id", node.getGUID().toString());
+		nodeData.put("Id", node.getGUID());
 		nodeData.put("Name", node.getName());
 		nodeData.put("DisplayName", node.getDisplayName());
 		nodeData.put("Description", node.getDescriptionPlainText());
