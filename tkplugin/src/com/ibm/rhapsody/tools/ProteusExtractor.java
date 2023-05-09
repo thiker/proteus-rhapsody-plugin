@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -41,7 +42,7 @@ public class ProteusExtractor {
 	static IRPProject irpPrj;
 	static MqttClient mqttClient;
 	static int mqttQos = 1;
-	static String mqttBroker = "tcp://10.211.55.2:1883";
+	static String mqttBroker = "tcp://localhost:1883";
 	static String mqttClientId = "IBMRhapsody";
 	static Path tempDirPath = null;
 
@@ -53,19 +54,45 @@ public class ProteusExtractor {
 	 */
 	static void sendNodeDataUpdate(IRPDiagram node) {
 		JSONObject nodeData = new JSONObject();
+		// Generate edge data
+		Set<String> relatedDiagramsGuids = getRelatedDiagramsOfDiagram(node);
+		
+		Set<String> nodeEdges = new HashSet<>();
+		
+		for (String diagramGuid : relatedDiagramsGuids) {
+			JSONObject edgeData = new JSONObject();
+			String edgeId = "PT_EDGE " + node.getGUID()  + " " + diagramGuid;
+			
+			edgeData.put("Id", edgeId);
+			edgeData.put("Source", node.getGUID());
+			edgeData.put("Target", diagramGuid);
+			
+			// Send edge update
+			sendMqttMessage(edgeData, "proteus/data/update/3dml/edges/" + edgeId);
+			
+			nodeEdges.add(edgeId);
+		}
+		
+		// Generate node data
 		nodeData.put("Id", node.getGUID());
 		nodeData.put("Name", node.getName());
 		nodeData.put("DisplayName", node.getDisplayName());
 		nodeData.put("Description", node.getDescriptionPlainText());
+		nodeData.put("Edges", nodeEdges.toArray());
 
+		sendMqttMessage(nodeData, "proteus/data/update/3dml/nodes/" + node.getGUID().toString());
+
+	}
+	
+	static void sendMqttMessage(JSONObject data, String topic) {
 		// Create message
 		MqttMessage message = new MqttMessage();
-		message.setPayload(nodeData.toString().getBytes());
+		message.setPayload(data.toString().getBytes());
 		message.setQos(mqttQos);
 
 		// Send update
 		try {
-			mqttClient.publish("proteus/data/update/3dml/nodes/" + node.getGUID().toString(), message);
+			mqttClient.publish(topic, message);
 		} catch (MqttPersistenceException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -155,15 +182,43 @@ public class ProteusExtractor {
 
 	}
 
+	/**
+	 * Get the diagrams that are related to the given diagram.
+	 * @param diagram the parent diagram
+	 * @return related diagrams
+	 */
+	static Set<String> getRelatedDiagramsOfDiagram(IRPDiagram diagram) {
+		IRPCollection diagElements = diagram.getElementsInDiagram();
+		
+		Set<String> linkedDiagrams = new HashSet<>();
+		
+		// Add the GUIDs of the related diagrams
+		for (int i = 1; i <= diagElements.getCount(); i++) {
+			IRPModelElement element = (IRPModelElement)diagElements.getItem(i);
+			IRPDiagram mainDiagram = element.getMainDiagram();
+			
+			if (mainDiagram != null) {
+				// Prevent self loops
+				if (!diagram.getGUID().equals(mainDiagram.getGUID())) {
+					linkedDiagrams.add(mainDiagram.getGUID());
+				}
+			}
+
+		}
+		
+		return linkedDiagrams;
+	}
+	
 	static void generate() {
 		// Object Model Diagrams
 		IRPCollection allColl = irpPrj.getNestedElementsByMetaClass("ObjectModelDiagram", 1);
 
 		for (int i = 1; i <= allColl.getCount(); i++) {
-			IRPDiagram element = (IRPDiagram) allColl.getItem(i);
-			System.out.println("Sending update for element" + element.getDisplayName());
-			sendNodeDataUpdate(element);
-			sendNodeImageUpdate(element);
+			IRPDiagram diagram = (IRPDiagram) allColl.getItem(i);
+			System.out.println("Sending update for element" + diagram.getDisplayName());
+			
+			sendNodeDataUpdate(diagram);
+			sendNodeImageUpdate(diagram);
 		}
 	}
 
