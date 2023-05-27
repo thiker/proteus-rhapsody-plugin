@@ -1,0 +1,70 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 10;
+	- value = "DefaultComponent\\DefaultConfig\\Car.cpp" 5.27.2023::18:35:48
+	"DefaultComponent\\DefaultConfig\\Car.h" 5.27.2023::18:35:48
+	"DefaultComponent\\DefaultConfig\\Default.cpp" 5.27.2023::18:35:48
+	"DefaultComponent\\DefaultConfig\\Default.h" 5.27.2023::18:35:48
+	"DefaultComponent\\DefaultConfig\\Engine.cpp" 5.27.2023::18:37:44
+	"DefaultComponent\\DefaultConfig\\Engine.h" 5.27.2023::18:37:44
+	"DefaultComponent\\DefaultConfig\\Starter.cpp" 5.27.2023::18:33:40
+	"DefaultComponent\\DefaultConfig\\Starter.h" 5.27.2023::18:33:40
+	"DefaultComponent\\DefaultConfig\\Wheel.cpp" 5.27.2023::18:35:48
+	"DefaultComponent\\DefaultConfig\\Wheel.h" 5.27.2023::18:33:40
+	
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 2;
+	- value = "GUID 7d55683e-621b-4d12-9139-15b3a47d253b" "GUID 9b03fc16-53b9-4d3f-8848-4ec7ec666d1a"
+	"GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6" "GUID 9b03fc16-53b9-4d3f-8848-4ec7ec666d1a"
+	
+}
+- size = 6;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID 15408934-aa64-42d6-a78f-06841b41bea8;
+}
+- genTime = 5.27.2023::18:42:50;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Starter";
+	- _id = GUID f1aca1fd-f5bc-4457-beca-3c6e804dc37d;
+}
+- genTime = 5.27.2023::18:42:16;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Car";
+	- _id = GUID 686ab6aa-a66e-4dc2-8c86-7fbc11b2a2af;
+}
+- genTime = 5.27.2023::18:37:44;
+- hElement = { IHandle 
+	- _m2Class = "ISubsystem";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\Default.sbsx";
+	- _name = "Default";
+	- _id = GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6;
+}
+- genTime = 5.27.2023::18:42:16;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Wheel";
+	- _id = GUID 41d094b5-0884-46bb-adff-1c176f2b4356;
+}
+- genTime = 5.27.2023::18:35:49;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = ".\\..\\..\\ProteusDemo_rpy\\Default.sbsx";
+	- _subsystem = "Default";
+	- _name = "Engine";
+	- _id = GUID 82fbbb31-c91a-4874-8183-865086c7b200;
+}
+- genTime = 5.27.2023::18:42:16;
+

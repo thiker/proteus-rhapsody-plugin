@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -34,6 +35,8 @@ import com.telelogic.rhapsody.core.IRPImageMap;
 import com.telelogic.rhapsody.core.IRPModelElement;
 import com.telelogic.rhapsody.core.IRPPackage;
 import com.telelogic.rhapsody.core.IRPProject;
+import com.telelogic.rhapsody.core.IRPStatechart;
+import com.telelogic.rhapsody.core.IRPUnit;
 import com.telelogic.rhapsody.core.RPGraphicalProperty;
 import com.telelogic.rhapsody.core.RhapsodyAppServer;
 
@@ -46,109 +49,7 @@ public class ProteusExtractor {
 	static String mqttClientId = "IBMRhapsody";
 	static Path tempDirPath = null;
 
-	/***
-	 * Generates a message that contains the data of a node.
-	 * 
-	 * @param node
-	 * @return message with node data
-	 */
-	static void sendNodeDataUpdate(IRPDiagram node) {
-		JSONObject nodeData = new JSONObject();
-		// Generate edge data
-		Set<String> relatedDiagramsGuids = getRelatedDiagramsOfDiagram(node);
-		
-		Set<String> nodeEdges = new HashSet<>();
-		
-		for (String diagramGuid : relatedDiagramsGuids) {
-			JSONObject edgeData = new JSONObject();
-			String edgeId = "PT_EDGE " + node.getGUID()  + " " + diagramGuid;
-			
-			edgeData.put("Id", edgeId);
-			edgeData.put("Source", node.getGUID());
-			edgeData.put("Target", diagramGuid);
-			
-			// Send edge update
-			sendMqttMessage(edgeData, "proteus/data/update/3dml/edges/" + edgeId);
-			
-			nodeEdges.add(edgeId);
-		}
-		
-		// Generate node data
-		nodeData.put("Id", node.getGUID());
-		nodeData.put("Name", node.getName());
-		nodeData.put("DisplayName", node.getDisplayName());
-		nodeData.put("Description", node.getDescriptionPlainText());
-		nodeData.put("Edges", nodeEdges.toArray());
-
-		sendMqttMessage(nodeData, "proteus/data/update/3dml/nodes/" + node.getGUID().toString());
-
-	}
 	
-	static void sendMqttMessage(JSONObject data, String topic) {
-		// Create message
-		MqttMessage message = new MqttMessage();
-		message.setPayload(data.toString().getBytes());
-		message.setQos(mqttQos);
-
-		// Send update
-		try {
-			mqttClient.publish(topic, message);
-		} catch (MqttPersistenceException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MqttException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Generate a message that contains the image data of a node.
-	 * 
-	 * @param node
-	 * @return message with node image data
-	 */
-	static void sendNodeImageUpdate(IRPDiagram node) {
-		System.out.println("Processing image update for node "+ node.getDisplayName() + "..");
-		byte[] msgImageContent = new byte[0];
-
-		if (node != null) {
-			System.out.println("Generating diagram image...");
-			IRPCollection imageMaps = irpApp.createNewCollection();
-			Path imgPath = tempDirPath.resolve(node.getGUID() + ".jpeg");
-			
-			// Generate image
-			node.getPictureAs(imgPath.toString(), "JPEG", 1, imageMaps);
-			// Get image as bytes
-			try {
-				msgImageContent = Files.readAllBytes(imgPath);
-				System.out.println("Image to bytes completed.");
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		System.out.println("Creating image update message..");
-		// Create message
-		MqttMessage message = new MqttMessage();
-		message.setPayload(msgImageContent);
-		message.setQos(mqttQos);
-
-		// Send update
-		try {
-			mqttClient.publish("proteus/data/update/3dml/images/" + node.getGUID().toString(), message);
-			System.out.println("Image update sent of length "+ msgImageContent.length);
-		} catch (MqttPersistenceException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (MqttException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
-	}
-
 	/**
 	 * Initialises the MQTT client and connection.
 	 */
@@ -181,7 +82,136 @@ public class ProteusExtractor {
 		}
 
 	}
+	
+	static void sendMqttMessage(JSONObject data, String topic) {
+		// Create message
+		MqttMessage message = new MqttMessage();
+		message.setPayload(data.toString().getBytes());
+		message.setQos(mqttQos);
 
+		// Send update
+		try {
+			mqttClient.publish(topic, message);
+		} catch (MqttPersistenceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MqttException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+	static void sendDiagramNodeUpdate(IRPUnit node) {
+		sendNodeDataUpdate(node);
+		sendNodeImageUpdate(node);
+	}
+	
+	/***
+	 * Generates a message that contains the data of a node.
+	 * 
+	 * @param node
+	 * @return message with node data
+	 */
+	static void sendNodeDataUpdate(IRPUnit node) {
+		JSONObject nodeData = new JSONObject();
+		// Generate edge data
+		Set<String> relatedDiagramsGuids = Collections.emptySet();
+		
+		if (node instanceof IRPDiagram) {
+			relatedDiagramsGuids = getRelatedDiagramsOfDiagram((IRPDiagram)node);
+		}
+		
+		
+		Set<String> nodeEdges = new HashSet<>();
+		
+		for (String diagramGuid : relatedDiagramsGuids) {
+			JSONObject edgeData = new JSONObject();
+			String edgeId = "PT_EDGE " + node.getGUID()  + " " + diagramGuid;
+			
+			edgeData.put("Id", edgeId);
+			edgeData.put("Source", node.getGUID());
+			edgeData.put("Target", diagramGuid);
+			
+			// Send edge update
+			sendMqttMessage(edgeData, "proteus/data/update/3dml/edges/" + edgeId);
+			
+			nodeEdges.add(edgeId);
+		}
+		
+		// Generate node data
+		nodeData.put("Id", node.getGUID());
+		nodeData.put("Name", node.getName());
+		nodeData.put("MetaClass", node.getMetaClass());
+		nodeData.put("DisplayName", node.getDisplayName());
+		nodeData.put("Description", node.getDescriptionPlainText());
+		nodeData.put("Edges", nodeEdges.toArray());
+
+		sendMqttMessage(nodeData, "proteus/data/update/3dml/nodes/" + node.getGUID().toString());
+
+	}
+	
+
+	/**
+	 * Generate a message that contains the image data of a node.
+	 * 
+	 * @param node
+	 * @return message with node image data
+	 */
+	static void sendNodeImageUpdate(IRPUnit node) {
+		
+		System.out.println("Processing image update for node "+ node.getDisplayName() + "..");
+		byte[] msgImageContent = new byte[0];
+
+		if (node != null) {
+			System.out.println("Generating diagram image...");
+			IRPCollection imageMaps = irpApp.createNewCollection();
+			Path imgPath = tempDirPath.resolve(node.getGUID() + ".jpeg");
+			
+			// Generate image
+			if (node instanceof IRPDiagram) {
+				((IRPDiagram)node).getPictureAs(imgPath.toString(), "JPEG", 1, imageMaps);
+			} else if (node instanceof IRPStatechart) {
+				((IRPStatechart)node).getPictureAs(imgPath.toString(), "JPEG", 1, imageMaps);
+			}
+
+			// Get image as bytes
+			try {
+				msgImageContent = Files.readAllBytes(imgPath);
+				System.out.println("Image to bytes completed.");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		System.out.println("Creating image update message..");
+		// Create message
+		MqttMessage message = new MqttMessage();
+		message.setPayload(msgImageContent);
+		message.setQos(mqttQos);
+
+		// Send update
+		try {
+			mqttClient.publish("proteus/data/update/3dml/images/" + node.getGUID().toString(), message);
+			System.out.println("Image update sent of length "+ msgImageContent.length);
+		} catch (MqttPersistenceException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (MqttException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+
+	/******************************************************
+	 * 
+	 *  Helpers
+	 *
+	 ******************************************************/
+	
 	/**
 	 * Get the diagrams that are related to the given diagram.
 	 * @param diagram the parent diagram
@@ -209,19 +239,56 @@ public class ProteusExtractor {
 		return linkedDiagrams;
 	}
 	
+	
+	/******************************************************
+	 * 
+	 *  EXTRACTION / GENERATION
+	 *
+	 ******************************************************/
+	
+	/**
+	 * Start extracting the data for Proteus
+	 */
 	static void generate() {
-		// Object Model Diagrams
-		IRPCollection allColl = irpPrj.getNestedElementsByMetaClass("ObjectModelDiagram", 1);
+		IRPCollection packages = irpPrj.getPackages();
+		
 
-		for (int i = 1; i <= allColl.getCount(); i++) {
-			IRPDiagram diagram = (IRPDiagram) allColl.getItem(i);
-			System.out.println("Sending update for element" + diagram.getDisplayName());
-			
-			sendNodeDataUpdate(diagram);
-			sendNodeImageUpdate(diagram);
+		
+		for(IRPPackage irpPackage : (List<IRPPackage>)packages.toList()) {
+			extractClasses(irpPackage);
+			extractObjectModelDiagrams(irpPackage);
 		}
+
 	}
 
+	/**
+	 * Extract all object model diagrams from the project.
+	 * @param irpPackage
+	 */
+	static void extractObjectModelDiagrams(IRPPackage irpPackage) {
+			IRPCollection omdCollection = irpPackage.getObjectModelDiagrams();
+			
+			for (int i = 1; i <= omdCollection.getCount(); i++) {
+				IRPDiagram diagram = (IRPDiagram) omdCollection.getItem(i);
+				sendDiagramNodeUpdate(diagram);
+			}
+	}
+	
+	/**
+	 * Extracts all classes model elements from the project.
+	 */
+	static void extractClasses(IRPPackage irpPackage) {
+		IRPCollection irpClasses = irpPackage.getClasses();
+
+		for(IRPClass irpClass : (List<IRPClass>)irpClasses.toList()) {
+			IRPCollection stateCharts = irpClass.getBehavioralDiagrams();
+
+			for (IRPStatechart statechart : (List<IRPStatechart>)stateCharts.toList()) {
+				sendDiagramNodeUpdate((IRPUnit)statechart);
+			}
+		}
+	}
+	
 	public static void main(String[] args) throws IOException, InterruptedException {
 		// Setup IBMRhapsody API
 		irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
