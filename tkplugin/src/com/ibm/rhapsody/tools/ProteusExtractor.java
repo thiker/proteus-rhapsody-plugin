@@ -114,16 +114,29 @@ public class ProteusExtractor {
 	 * @return message with node data
 	 */
 	static void sendNodeDataUpdate(IRPUnit node) {
-		JSONObject nodeData = new JSONObject();
-		// Generate edge data
+		IRPCollection modelElements = null;
+		Set<String> modelElementsGuids = new HashSet<>();
+		Set<String> nodeEdges = new HashSet<>();
 		Set<String> relatedDiagramsGuids = Collections.emptySet();
 		
+		JSONObject nodeData = new JSONObject();
+		
+		// Generate edge data and get model elements guids.
 		if (node instanceof IRPDiagram) {
-			relatedDiagramsGuids = getRelatedDiagramsOfDiagram((IRPDiagram)node);
+			IRPDiagram nodeAsDiagram = (IRPDiagram)node;
+			relatedDiagramsGuids = getRelatedDiagramsOfDiagram(nodeAsDiagram);
+			modelElements = nodeAsDiagram.getElementsInDiagram();
+		} else if (node instanceof IRPStatechart) {
+			IRPStatechart nodeAsStatechart = (IRPStatechart)node;
+			modelElements = nodeAsStatechart.getElementsInDiagram();
 		}
 		
-		
-		Set<String> nodeEdges = new HashSet<>();
+		// Get the ids of all model elements in the diagram.
+		if (modelElements != null) {
+			for(IRPModelElement element : (List<IRPModelElement>)modelElements.toList()) {
+				modelElementsGuids.add(element.getGUID());
+			}
+		}
 		
 		for (String diagramGuid : relatedDiagramsGuids) {
 			JSONObject edgeData = new JSONObject();
@@ -146,9 +159,9 @@ public class ProteusExtractor {
 		nodeData.put("DisplayName", node.getDisplayName());
 		nodeData.put("Description", node.getDescriptionPlainText());
 		nodeData.put("Edges", nodeEdges.toArray());
+		nodeData.put("ModelElements", modelElementsGuids.toArray());
 
 		sendMqttMessage(nodeData, "proteus/data/update/3dml/nodes/" + node.getGUID().toString());
-
 	}
 	
 
@@ -159,7 +172,6 @@ public class ProteusExtractor {
 	 * @return message with node image data
 	 */
 	static void sendNodeImageUpdate(IRPUnit node) {
-		
 		System.out.println("Processing image update for node "+ node.getDisplayName() + "..");
 		byte[] msgImageContent = new byte[0];
 
@@ -202,6 +214,25 @@ public class ProteusExtractor {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	
+	static void sendClassModelElementUpdate(IRPClass element, Set<String> relatedDiagramGuids) {
+		if (element == null) {
+			return;
+		}
+		
+		JSONObject data = new JSONObject();
+		
+		data.put("Id", element.getGUID());
+		data.put("MetaClass", element.getMetaClass());
+		data.put("Name", element.getName());
+		data.put("Description", element.getDescription());
+		data.put("DisplayName", element.getDisplayName());
+		data.put("RelatedDiagrams", relatedDiagramGuids.toArray());
+
+		
+		System.out.println("Creating model element update for node "+ element.getDisplayName() + "..");
+		sendMqttMessage(data, "proteus/data/update/3dml/model-elements/" + element.getGUID().toString());
 
 	}
 
@@ -283,9 +314,13 @@ public class ProteusExtractor {
 		for(IRPClass irpClass : (List<IRPClass>)irpClasses.toList()) {
 			IRPCollection stateCharts = irpClass.getBehavioralDiagrams();
 
+			Set<String> relatedDiagramsGuids = new HashSet<>();
 			for (IRPStatechart statechart : (List<IRPStatechart>)stateCharts.toList()) {
+				relatedDiagramsGuids.add(statechart.getGUID());
 				sendDiagramNodeUpdate((IRPUnit)statechart);
 			}
+			
+			sendClassModelElementUpdate(irpClass, relatedDiagramsGuids);
 		}
 	}
 	
