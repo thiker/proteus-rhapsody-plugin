@@ -228,7 +228,7 @@ public class ProteusExtractor {
 		data.put("Name", element.getName());
 		data.put("Description", element.getDescription());
 		data.put("DisplayName", element.getDisplayName());
-		data.put("RelatedDiagrams", relatedDiagramGuids.toArray());
+		data.put("RelatedNodes", relatedDiagramGuids.toArray());
 
 		
 		System.out.println("Creating model element update for node "+ element.getDisplayName() + "..");
