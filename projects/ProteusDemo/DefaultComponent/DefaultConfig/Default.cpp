@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Sun, 28, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Default.cpp
 *********************************************************************/
 
@@ -18,10 +18,16 @@
 #include "Car.h"
 //## classInstance itsEngine
 #include "Engine.h"
+//## classInstance itsProteusRhapsody
+#include "ProteusRhapsody.h"
 //## classInstance itsStarter
 #include "Starter.h"
 //## classInstance itsWheel
 #include "Wheel.h"
+//## auto_generated
+#include "StarterComponent.h"
+//## auto_generated
+#include "StarterComponent2.h"
 //#[ ignore
 #define evRun_SERIALIZE OM_NO_OP
 
@@ -57,6 +63,9 @@ Car itsCar;
 //## classInstance itsEngine
 Engine itsEngine;
 
+//## classInstance itsProteusRhapsody
+ProteusRhapsody itsProteusRhapsody;
+
 //## classInstance itsStarter
 Starter itsStarter;
 
@@ -79,6 +88,9 @@ void Default_initRelations() {
         {
             itsEngine.setShouldDelete(false);
         }
+        {
+            itsProteusRhapsody.setShouldDelete(false);
+        }
     }
     itsStarter.setItsEngine(&itsEngine);
     itsEngine.setItsCar(&itsCar);
@@ -92,6 +104,7 @@ void Default_initRelations() {
 bool Default_startBehavior() {
     bool done = true;
     done &= itsEngine.startBehavior();
+    done &= itsProteusRhapsody.startBehavior();
     done &= itsStarter.startBehavior();
     return done;
 }
@@ -105,6 +118,7 @@ static void RenameGlobalInstances() {
     OM_SET_INSTANCE_NAME(&itsEngine, Engine, "itsEngine", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsCar, Car, "itsCar", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsWheel, Wheel, "itsWheel", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsProteusRhapsody, ProteusRhapsody, "itsProteusRhapsody", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 

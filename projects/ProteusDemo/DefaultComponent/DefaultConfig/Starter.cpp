@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Starter
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Sun, 28, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Starter.cpp
 *********************************************************************/
 
@@ -18,6 +18,10 @@
 #include "Starter.h"
 //## link itsEngine
 #include "Engine.h"
+//## link itsStarterComponent
+#include "StarterComponent.h"
+//## link itsStarterComponent2
+#include "StarterComponent2.h"
 //#[ ignore
 #define Default_Starter_Starter_SERIALIZE OM_NO_OP
 //#]
@@ -29,6 +33,8 @@ Starter::Starter(IOxfActive* theActiveContext) {
     NOTIFY_REACTIVE_CONSTRUCTOR(Starter, Starter(), 0, Default_Starter_Starter_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsEngine = NULL;
+    itsStarterComponent = NULL;
+    itsStarterComponent2 = NULL;
     initStatechart();
 }
 
@@ -53,6 +59,30 @@ void Starter::setItsEngine(Engine* p_Engine) {
         }
 }
 
+StarterComponent* Starter::getItsStarterComponent() const {
+    return itsStarterComponent;
+}
+
+void Starter::setItsStarterComponent(StarterComponent* p_StarterComponent) {
+    if(p_StarterComponent != NULL)
+        {
+            p_StarterComponent->_setItsStarter(this);
+        }
+    _setItsStarterComponent(p_StarterComponent);
+}
+
+StarterComponent2* Starter::getItsStarterComponent2() const {
+    return itsStarterComponent2;
+}
+
+void Starter::setItsStarterComponent2(StarterComponent2* p_StarterComponent2) {
+    if(p_StarterComponent2 != NULL)
+        {
+            p_StarterComponent2->_setItsStarter(this);
+        }
+    _setItsStarterComponent2(p_StarterComponent2);
+}
+
 bool Starter::startBehavior() {
     bool done = false;
     done = OMReactive::startBehavior();
@@ -70,6 +100,76 @@ void Starter::cleanUpRelations() {
             NOTIFY_RELATION_CLEARED("itsEngine");
             itsEngine = NULL;
         }
+    if(itsStarterComponent != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsStarterComponent");
+            Starter* p_Starter = itsStarterComponent->getItsStarter();
+            if(p_Starter != NULL)
+                {
+                    itsStarterComponent->__setItsStarter(NULL);
+                }
+            itsStarterComponent = NULL;
+        }
+    if(itsStarterComponent2 != NULL)
+        {
+            NOTIFY_RELATION_CLEARED("itsStarterComponent2");
+            Starter* p_Starter = itsStarterComponent2->getItsStarter();
+            if(p_Starter != NULL)
+                {
+                    itsStarterComponent2->__setItsStarter(NULL);
+                }
+            itsStarterComponent2 = NULL;
+        }
+}
+
+void Starter::__setItsStarterComponent(StarterComponent* p_StarterComponent) {
+    itsStarterComponent = p_StarterComponent;
+    if(p_StarterComponent != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsStarterComponent", p_StarterComponent, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsStarterComponent");
+        }
+}
+
+void Starter::_setItsStarterComponent(StarterComponent* p_StarterComponent) {
+    if(itsStarterComponent != NULL)
+        {
+            itsStarterComponent->__setItsStarter(NULL);
+        }
+    __setItsStarterComponent(p_StarterComponent);
+}
+
+void Starter::_clearItsStarterComponent() {
+    NOTIFY_RELATION_CLEARED("itsStarterComponent");
+    itsStarterComponent = NULL;
+}
+
+void Starter::__setItsStarterComponent2(StarterComponent2* p_StarterComponent2) {
+    itsStarterComponent2 = p_StarterComponent2;
+    if(p_StarterComponent2 != NULL)
+        {
+            NOTIFY_RELATION_ITEM_ADDED("itsStarterComponent2", p_StarterComponent2, false, true);
+        }
+    else
+        {
+            NOTIFY_RELATION_CLEARED("itsStarterComponent2");
+        }
+}
+
+void Starter::_setItsStarterComponent2(StarterComponent2* p_StarterComponent2) {
+    if(itsStarterComponent2 != NULL)
+        {
+            itsStarterComponent2->__setItsStarter(NULL);
+        }
+    __setItsStarterComponent2(p_StarterComponent2);
+}
+
+void Starter::_clearItsStarterComponent2() {
+    NOTIFY_RELATION_CLEARED("itsStarterComponent2");
+    itsStarterComponent2 = NULL;
 }
 
 void Starter::rootState_entDef() {
@@ -140,6 +240,16 @@ void OMAnimatedStarter::serializeRelations(AOMSRelations* aomsRelations) const {
     if(myReal->itsEngine)
         {
             aomsRelations->ADD_ITEM(myReal->itsEngine);
+        }
+    aomsRelations->addRelation("itsStarterComponent2", false, true);
+    if(myReal->itsStarterComponent2)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsStarterComponent2);
+        }
+    aomsRelations->addRelation("itsStarterComponent", false, true);
+    if(myReal->itsStarterComponent)
+        {
+            aomsRelations->ADD_ITEM(myReal->itsStarterComponent);
         }
 }
 

@@ -1,0 +1,19 @@
+I-Logix-RPY-Archive version 8.15.0 * 202002261110
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 0;
+}
+- m_saveUnitAndOwnerSaveUnit = { IRPYRawContainer 
+	- size = 1;
+	- value = "GUID e164fea1-d0f4-4df3-9f24-51aecef7dbe3" "GUID 776c73d5-5ce3-4704-ae54-232d61b75354"
+	
+}
+- size = 1;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = ".\\..\\..\\JavaMQTTTest_rpy\\DefaultComponent.cmpx";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID 791f4096-64d1-4696-a576-242a92a505d3;
+}
+- genTime = 5.28.2023::19:4:27;
+

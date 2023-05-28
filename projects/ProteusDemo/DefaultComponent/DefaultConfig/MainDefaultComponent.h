@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Sun, 28, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.h
 *********************************************************************/
 
@@ -15,6 +15,8 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <aom\aom.h>
+//## auto_generated
+#include "MQTTClient.h"
 class DefaultComponent {
     ////    Constructors and destructors    ////
     

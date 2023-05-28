@@ -77,9 +77,11 @@ all : $(TARGET_NAME)$(EXE_EXT) DefaultComponent.mak
 
 TARGET_MAIN=MainDefaultComponent
 
-LIBS=
+LIBS= \
+  ..\..\DefaultComponent\Eclipse-Paho-MQTT-C-1.3.12-win32\lib\paho-mqtt3c.lib
 
 INCLUDE_PATH= \
+  $(INCLUDE_QUALIFIER)..\..\DefaultComponent\Eclipse-Paho-MQTT-C-1.3.12-win32\include \
   $(INCLUDE_QUALIFIER)$(OMROOT)/LangCpp/osconfig/WIN32
 
 ADDITIONAL_OBJS=
@@ -89,7 +91,11 @@ OBJS= \
   Engine.obj \
   Wheel.obj \
   Starter.obj \
-  Default.obj
+  StarterComponent.obj \
+  StarterComponent2.obj \
+  ProteusRhapsody.obj \
+  Default.obj \
+  Proteus.obj
 
 
 
@@ -190,15 +196,39 @@ Wheel.obj : Wheel.cpp Wheel.h    Default.h Car.h
 
 
 
-Starter.obj : Starter.cpp Starter.h    Default.h Engine.h 
+Starter.obj : Starter.cpp Starter.h    Default.h Engine.h StarterComponent2.h StarterComponent.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Starter.obj" "Starter.cpp" 
 
 
 
-Default.obj : Default.cpp Default.h    Car.h Engine.h Wheel.h Starter.h 
+StarterComponent.obj : StarterComponent.cpp StarterComponent.h    Default.h Starter.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"StarterComponent.obj" "StarterComponent.cpp" 
+
+
+
+StarterComponent2.obj : StarterComponent2.cpp StarterComponent2.h    Default.h Starter.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"StarterComponent2.obj" "StarterComponent2.cpp" 
+
+
+
+ProteusRhapsody.obj : ProteusRhapsody.cpp ProteusRhapsody.h    Proteus.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ProteusRhapsody.obj" "ProteusRhapsody.cpp" 
+
+
+
+Default.obj : Default.cpp Default.h    Car.h Engine.h Wheel.h Starter.h StarterComponent.h StarterComponent2.h ProteusRhapsody.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Default.obj" "Default.cpp" 
+
+
+
+Proteus.obj : Proteus.cpp Proteus.h    ProteusRhapsody.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Proteus.obj" "Proteus.cpp" 
 
 
 
@@ -233,7 +263,11 @@ clean:
 	if exist Engine.obj erase Engine.obj
 	if exist Wheel.obj erase Wheel.obj
 	if exist Starter.obj erase Starter.obj
+	if exist StarterComponent.obj erase StarterComponent.obj
+	if exist StarterComponent2.obj erase StarterComponent2.obj
+	if exist ProteusRhapsody.obj erase ProteusRhapsody.obj
 	if exist Default.obj erase Default.obj
+	if exist Proteus.obj erase Proteus.obj
 	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)
 	if exist *$(OBJ_EXT) erase *$(OBJ_EXT)
 	if exist $(TARGET_NAME).pdb erase $(TARGET_NAME).pdb

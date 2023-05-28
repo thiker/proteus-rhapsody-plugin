@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RhapsodyArchive>
+	<MagicNumber></MagicNumber>
+	<CODE-PAGE>1252</CODE-PAGE>
+	<version>109.0</version>
+	<lang>C++</lang>
+	<BuildNo>202002261110</BuildNo>
+	<RMMMinimumClientVersion>100.0</RMMMinimumClientVersion>
+	
+	<RHAPSODY-MODEL>
+	<IComponent type="e">
+			<_id type="a">GUID 06511d08-40d0-4c53-a3a0-ceedaadf2217</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">ProteusComponent</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::21:15:25</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:15:25</_modifiedTime>
+			<m_buildType type="a">Executable</m_buildType>
+			<m_libraries type="a">D:\Coding\GitRepos\Eclipse-Paho-MQTT-C-1.3.12-win32\lib\paho-mqtt3c.lib</m_libraries>
+			<m_standardHeaders type="a">MQTTClient.h</m_standardHeaders>
+			<m_includePath type="a">D:\Coding\GitRepos\Eclipse-Paho-MQTT-C-1.3.12-win32\include</m_includePath>
+			<m_configActive type="r">
+				<ICodeGenConfigInfoHandle type="e">
+					<_hm2Class type="a">ICodeGenConfigInfo</_hm2Class>
+					<_hid type="a">GUID 8f35bbf0-a592-42f0-803b-0984046e0839</_hid>
+				</ICodeGenConfigInfoHandle>
+			</m_configActive>
+			<VariationPoints type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</VariationPoints>
+			<SelectedVariants type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</SelectedVariants>
+			<weakCGTime type="a">5.28.2023::21:15:25</weakCGTime>
+			<strongCGTime type="a">5.28.2023::21:15:25</strongCGTime>
+			<AggregatesList type="e">
+				<value>GUID c733901f-eea3-41ba-b178-314b032b1f50</value>
+				<value>GUID 8f35bbf0-a592-42f0-803b-0984046e0839</value>
+			</AggregatesList>
+		</IComponent>
+		<IFolder type="e">
+			<_id type="a">GUID c733901f-eea3-41ba-b178-314b032b1f50</_id>
+			<_myState type="a">73728</_myState>
+			<_name type="a">Files</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::21:12:52</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:12:52</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		<ICodeGenConfigInfo type="e">
+			<_id type="a">GUID 8f35bbf0-a592-42f0-803b-0984046e0839</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">DefaultConfig</_name>
+			<_modifiedTimeWeak type="a">5.28.2023::21:17:41</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:17:41</_modifiedTime>
+			<_scopeType type="a">Explicit</_scopeType>
+			<_instrumentation type="a">None</_instrumentation>
+			<_timeModel type="a">RealTime</_timeModel>
+			<m_generateActors type="a">1</m_generateActors>
+			<_statechartImplementation type="a">Flat</_statechartImplementation>
+			<_initializationCode type="a">#define ADDRESS     &quot;tcp://localhost:1883&quot;%0D
+#define CLIENTID    &quot;ExampleClientPub&quot;%0D
+#define TOPIC       &quot;MQTT Examples&quot;%0D
+#define PAYLOAD     &quot;Hello yee!&quot;%0D
+#define QOS         1%0D
+#define TIMEOUT     10000L%0D
+   %0D
+    MQTTClient client;%0D
+    MQTTClient_connectOptions conn_opts = MQTTClient_connectOptions_initializer;%0D
+    MQTTClient_message pubmsg = MQTTClient_message_initializer;%0D
+    MQTTClient_deliveryToken token;%0D
+    int rc;%0D
+ %0D
+    if ((rc = MQTTClient_create(&amp;client, ADDRESS, CLIENTID,%0D
+        MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTCLIENT_SUCCESS)%0D
+    {%0D
+         printf(&quot;Failed to create client, return code %25d\n&quot;, rc);%0D
+         exit(EXIT_FAILURE);%0D
+    }%0D
+ %0D
+    conn_opts.keepAliveInterval = 20;%0D
+    conn_opts.cleansession = 1;%0D
+    if ((rc = MQTTClient_connect(client, &amp;conn_opts)) != MQTTCLIENT_SUCCESS)%0D
+    {%0D
+        printf(&quot;Failed to connect, return code %25d\n&quot;, rc);%0D
+        exit(EXIT_FAILURE);%0D
+    }%0D
+ %0D
+    pubmsg.payload = PAYLOAD;%0D
+    pubmsg.payloadlen = (int)strlen(PAYLOAD);%0D
+    pubmsg.qos = QOS;%0D
+    pubmsg.retained = 0;%0D
+    if ((rc = MQTTClient_publishMessage(client, TOPIC, &amp;pubmsg, &amp;token)) != MQTTCLIENT_SUCCESS)%0D
+    {%0D
+         printf(&quot;Failed to publish message, return code %25d\n&quot;, rc);%0D
+         exit(EXIT_FAILURE);%0D
+    }%0D
+ %0D
+    printf(&quot;Waiting for up to %25d seconds for publication of %25s\n&quot;%0D
+            &quot;on topic %25s for client with ClientID: %25s\n&quot;,%0D
+            (int)(TIMEOUT/1000), PAYLOAD, TOPIC, CLIENTID);%0D
+    rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);%0D
+    printf(&quot;Message with delivery token %25d delivered\n&quot;, token);%0D
+ %0D
+    if ((rc = MQTTClient_disconnect(client, 10000)) != MQTTCLIENT_SUCCESS)%0D
+        printf(&quot;Failed to disconnect, return code %25d\n&quot;, rc);%0D
+    MQTTClient_destroy(&amp;client);</_initializationCode>
+			<_checksList type="a">0 ,</_checksList>
+			<_checksList_Default type="a">1</_checksList_Default>
+			<ScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</ScopeElements>
+			<InitialInstances type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</InitialInstances>
+			<weakCGTime type="a">5.28.2023::21:17:41</weakCGTime>
+			<strongCGTime type="a">1.2.1990::0:0:0</strongCGTime>
+			<AnimScopeElements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</AnimScopeElements>
+			<m_allInAnimScope type="a">1</m_allInAnimScope>
+			<m_generateUsecases type="a">0</m_generateUsecases>
+			<AggregatesList type="e">
+				<value>GUID 7f95782e-bf30-46e7-899a-6a16fe3b7e43</value>
+				<value>GUID a8921176-59f3-4dff-bc45-b1753b922353</value>
+				<value>GUID b0d076f2-8881-4549-972b-3a96b5f4b3d3</value>
+			</AggregatesList>
+		</ICodeGenConfigInfo>
+		<IMHyperLink type="e">
+			<_id type="a">GUID 7f95782e-bf30-46e7-899a-6a16fe3b7e43</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:13:29</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Makefile</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">ProteusComponent.mak</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IMHyperLink type="e">
+			<_id type="a">GUID a8921176-59f3-4dff-bc45-b1753b922353</_id>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:13:29</_modifiedTime>
+			<_dependsOn type="r">
+				<INObjectHandle type="e">
+				</INObjectHandle>
+			</_dependsOn>
+			<_linkDispName type="a">Edit Main File</_linkDispName>
+			<_linkType type="a">FREE</_linkType>
+			<_linkTarget type="a">MainProteusComponent</_linkTarget>
+			<isConfigurationFileHyperLink type="a">1</isConfigurationFileHyperLink>
+		</IMHyperLink>
+		<IFolder type="e">
+			<_id type="a">GUID b0d076f2-8881-4549-972b-3a96b5f4b3d3</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">DefaultConfig</_name>
+			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.28.2023::21:12:52</_modifiedTime>
+			<Elements type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Elements>
+			<Files type="c">
+				<IRPYRawContainer type="e">
+				</IRPYRawContainer>
+			</Files>
+		</IFolder>
+		
+	</RHAPSODY-MODEL>
+	<OslcLinks type="c">
+		<IRPYRawContainer type="e">
+		</IRPYRawContainer>
+	</OslcLinks>
+
+<INCLUDES-RHAPSODY-INDEX>false</INCLUDES-RHAPSODY-INDEX>
+</RhapsodyArchive>
+

@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: DefaultConfig
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Sun, 28, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\MainDefaultComponent.cpp
 *********************************************************************/
 
@@ -12,6 +12,8 @@
 #include "MainDefaultComponent.h"
 //## auto_generated
 #include "Default.h"
+//## auto_generated
+#include "Proteus.h"
 DefaultComponent::DefaultComponent() {
     Default_initRelations();
     Default_startBehavior();

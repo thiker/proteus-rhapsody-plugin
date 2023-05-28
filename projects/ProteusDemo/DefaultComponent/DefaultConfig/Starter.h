@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Starter
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Sun, 28, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Starter.h
 *********************************************************************/
 
@@ -15,6 +15,8 @@
 #include <oxf\oxf.h>
 //## auto_generated
 #include <aom\aom.h>
+//## auto_generated
+#include "MQTTClient.h"
 //## auto_generated
 #include "Default.h"
 //## auto_generated
@@ -27,6 +29,12 @@
 #include <oxf\event.h>
 //## link itsEngine
 class Engine;
+
+//## link itsStarterComponent
+class StarterComponent;
+
+//## link itsStarterComponent2
+class StarterComponent2;
 
 //## package Default
 
@@ -57,6 +65,18 @@ public :
     void setItsEngine(Engine* p_Engine);
     
     //## auto_generated
+    StarterComponent* getItsStarterComponent() const;
+    
+    //## auto_generated
+    void setItsStarterComponent(StarterComponent* p_StarterComponent);
+    
+    //## auto_generated
+    StarterComponent2* getItsStarterComponent2() const;
+    
+    //## auto_generated
+    void setItsStarterComponent2(StarterComponent2* p_StarterComponent2);
+    
+    //## auto_generated
     virtual bool startBehavior();
 
 protected :
@@ -71,10 +91,32 @@ protected :
     
     Engine* itsEngine;		//## link itsEngine
     
+    StarterComponent* itsStarterComponent;		//## link itsStarterComponent
+    
+    StarterComponent2* itsStarterComponent2;		//## link itsStarterComponent2
+    
     ////    Framework operations    ////
 
 public :
 
+    //## auto_generated
+    void __setItsStarterComponent(StarterComponent* p_StarterComponent);
+    
+    //## auto_generated
+    void _setItsStarterComponent(StarterComponent* p_StarterComponent);
+    
+    //## auto_generated
+    void _clearItsStarterComponent();
+    
+    //## auto_generated
+    void __setItsStarterComponent2(StarterComponent2* p_StarterComponent2);
+    
+    //## auto_generated
+    void _setItsStarterComponent2(StarterComponent2* p_StarterComponent2);
+    
+    //## auto_generated
+    void _clearItsStarterComponent2();
+    
     // rootState:
     //## statechart_method
     inline bool rootState_IN() const;
