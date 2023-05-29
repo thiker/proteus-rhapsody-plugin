@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Default.h
 *********************************************************************/
 
@@ -19,14 +19,16 @@
 #include "MQTTClient.h"
 //## auto_generated
 #include <oxf\event.h>
+//## dependency Proteus
+#include "Proteus.h"
 //## classInstance itsCar
 class Car;
 
 //## classInstance itsEngine
 class Engine;
 
-//## classInstance itsProteusRhapsody
-class ProteusRhapsody;
+//## classInstance itsProteusComms
+class ProteusComms;
 
 //## classInstance itsStarter
 class Starter;
@@ -59,8 +61,8 @@ extern Car itsCar;
 //## classInstance itsEngine
 extern Engine itsEngine;
 
-//## classInstance itsProteusRhapsody
-extern ProteusRhapsody itsProteusRhapsody;
+//## classInstance itsProteusComms
+extern ProteusComms itsProteusComms;
 
 //## classInstance itsStarter
 extern Starter itsStarter;

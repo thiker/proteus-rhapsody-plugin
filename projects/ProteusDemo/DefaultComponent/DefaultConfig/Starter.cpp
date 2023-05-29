@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Starter
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Starter.cpp
 *********************************************************************/
 
@@ -29,7 +29,76 @@
 //## package Default
 
 //## class Starter
-Starter::Starter(IOxfActive* theActiveContext) {
+//#[ ignore
+Starter::pCommsStarter_C::pCommsStarter_C() : _p_(0) {
+    itsIProteusComms = NULL;
+}
+
+Starter::pCommsStarter_C::~pCommsStarter_C() {
+    cleanUpRelations();
+}
+
+void Starter::pCommsStarter_C::SetCurrentState(OMString stateObjectId, const OMString& state) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetCurrentState(stateObjectId,state);
+    }
+    
+}
+
+void Starter::pCommsStarter_C::SetStateData(const OMString& stateObjectId, const OMString& key, int data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+void Starter::pCommsStarter_C::SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data,useDataRaw);
+    }
+    
+}
+
+void Starter::pCommsStarter_C::SetStateData(const OMString& stateObjectId, const OMString& key, float data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+void Starter::pCommsStarter_C::SetStateData(const OMString& stateObjectId, const OMString& key, bool data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+IProteusComms* Starter::pCommsStarter_C::getItsIProteusComms() {
+    return this;
+}
+
+IProteusComms* Starter::pCommsStarter_C::getOutBound() {
+    return this;
+}
+
+void Starter::pCommsStarter_C::setItsIProteusComms(IProteusComms* p_IProteusComms) {
+    itsIProteusComms = p_IProteusComms;
+}
+
+void Starter::pCommsStarter_C::cleanUpRelations() {
+    if(itsIProteusComms != NULL)
+        {
+            itsIProteusComms = NULL;
+        }
+}
+//#]
+
+Starter::Starter(IOxfActive* theActiveContext) : ptStateObjectId("Starter") {
     NOTIFY_REACTIVE_CONSTRUCTOR(Starter, Starter(), 0, Default_Starter_Starter_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsEngine = NULL;
@@ -41,6 +110,22 @@ Starter::Starter(IOxfActive* theActiveContext) {
 Starter::~Starter() {
     NOTIFY_DESTRUCTOR(~Starter, true);
     cleanUpRelations();
+}
+
+Starter::pCommsStarter_C* Starter::getPCommsStarter() const {
+    return (Starter::pCommsStarter_C*) &pCommsStarter;
+}
+
+Starter::pCommsStarter_C* Starter::get_pCommsStarter() const {
+    return (Starter::pCommsStarter_C*) &pCommsStarter;
+}
+
+OMString Starter::getPtStateObjectId() const {
+    return ptStateObjectId;
+}
+
+void Starter::setPtStateObjectId(OMString p_ptStateObjectId) {
+    ptStateObjectId = p_ptStateObjectId;
 }
 
 Engine* Starter::getItsEngine() const {
@@ -181,6 +266,7 @@ void Starter::rootState_entDef() {
         rootState_active = Stopped;
         //#[ state Stopped.(Entry) 
         itsEngine->GEN(evIdle());
+        OUT_PORT(pCommsStarter)->SetCurrentState(ptStateObjectId, "Stopped");
         //#]
         NOTIFY_TRANSITION_TERMINATED("0");
     }
@@ -201,6 +287,7 @@ IOxfReactive::TakeEventStatus Starter::rootState_processEvent() {
                     rootState_active = Started;
                     //#[ state Started.(Entry) 
                     itsEngine->GEN(evRun);
+                    OUT_PORT(pCommsStarter)->SetCurrentState(ptStateObjectId, "Started");
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;
@@ -220,6 +307,7 @@ IOxfReactive::TakeEventStatus Starter::rootState_processEvent() {
                     rootState_active = Stopped;
                     //#[ state Stopped.(Entry) 
                     itsEngine->GEN(evIdle());
+                    OUT_PORT(pCommsStarter)->SetCurrentState(ptStateObjectId, "Stopped");
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("2");
                     res = eventConsumed;
@@ -235,6 +323,10 @@ IOxfReactive::TakeEventStatus Starter::rootState_processEvent() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedStarter::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("ptStateObjectId", x2String(myReal->ptStateObjectId));
+}
+
 void OMAnimatedStarter::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsEngine", false, true);
     if(myReal->itsEngine)

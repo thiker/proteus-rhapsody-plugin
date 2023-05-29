@@ -93,7 +93,8 @@ OBJS= \
   Starter.obj \
   StarterComponent.obj \
   StarterComponent2.obj \
-  ProteusRhapsody.obj \
+  ProteusComms.obj \
+  IProteusComms.obj \
   Default.obj \
   Proteus.obj
 
@@ -184,7 +185,7 @@ Car.obj : Car.cpp Car.h    Default.h Wheel.h Engine.h
 
 
 
-Engine.obj : Engine.cpp Engine.h    Default.h Car.h 
+Engine.obj : Engine.cpp Engine.h    Default.h Car.h IProteusComms.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Engine.obj" "Engine.cpp" 
 
@@ -196,7 +197,7 @@ Wheel.obj : Wheel.cpp Wheel.h    Default.h Car.h
 
 
 
-Starter.obj : Starter.cpp Starter.h    Default.h Engine.h StarterComponent2.h StarterComponent.h 
+Starter.obj : Starter.cpp Starter.h    Default.h Engine.h StarterComponent2.h StarterComponent.h IProteusComms.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Starter.obj" "Starter.cpp" 
 
@@ -214,19 +215,25 @@ StarterComponent2.obj : StarterComponent2.cpp StarterComponent2.h    Default.h S
 
 
 
-ProteusRhapsody.obj : ProteusRhapsody.cpp ProteusRhapsody.h    Proteus.h 
+ProteusComms.obj : ProteusComms.cpp ProteusComms.h    Proteus.h IProteusComms.h 
 	$(CREATE_OBJ_DIR)
-	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ProteusRhapsody.obj" "ProteusRhapsody.cpp" 
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"ProteusComms.obj" "ProteusComms.cpp" 
 
 
 
-Default.obj : Default.cpp Default.h    Car.h Engine.h Wheel.h Starter.h StarterComponent.h StarterComponent2.h ProteusRhapsody.h 
+IProteusComms.obj : IProteusComms.cpp IProteusComms.h    Proteus.h 
+	$(CREATE_OBJ_DIR)
+	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"IProteusComms.obj" "IProteusComms.cpp" 
+
+
+
+Default.obj : Default.cpp Default.h    Car.h Engine.h Wheel.h Starter.h StarterComponent.h StarterComponent2.h Proteus.h ProteusComms.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Default.obj" "Default.cpp" 
 
 
 
-Proteus.obj : Proteus.cpp Proteus.h    ProteusRhapsody.h 
+Proteus.obj : Proteus.cpp Proteus.h    ProteusComms.h IProteusComms.h 
 	$(CREATE_OBJ_DIR)
 	$(CPP) $(ConfigurationCPPCompileSwitches)  /Fo"Proteus.obj" "Proteus.cpp" 
 
@@ -265,7 +272,8 @@ clean:
 	if exist Starter.obj erase Starter.obj
 	if exist StarterComponent.obj erase StarterComponent.obj
 	if exist StarterComponent2.obj erase StarterComponent2.obj
-	if exist ProteusRhapsody.obj erase ProteusRhapsody.obj
+	if exist ProteusComms.obj erase ProteusComms.obj
+	if exist IProteusComms.obj erase IProteusComms.obj
 	if exist Default.obj erase Default.obj
 	if exist Proteus.obj erase Proteus.obj
 	if exist $(TARGET_MAIN)$(OBJ_EXT) erase $(TARGET_MAIN)$(OBJ_EXT)

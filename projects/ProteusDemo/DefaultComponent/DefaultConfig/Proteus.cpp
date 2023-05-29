@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Proteus
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Proteus.cpp
 *********************************************************************/
 
@@ -15,7 +15,9 @@
 //## auto_generated
 #include "Proteus.h"
 //## auto_generated
-#include "ProteusRhapsody.h"
+#include "IProteusComms.h"
+//## auto_generated
+#include "ProteusComms.h"
 //## package Proteus
 
 

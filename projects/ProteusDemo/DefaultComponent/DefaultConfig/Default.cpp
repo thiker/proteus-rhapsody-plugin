@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Default
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Default.cpp
 *********************************************************************/
 
@@ -18,8 +18,8 @@
 #include "Car.h"
 //## classInstance itsEngine
 #include "Engine.h"
-//## classInstance itsProteusRhapsody
-#include "ProteusRhapsody.h"
+//## classInstance itsProteusComms
+#include "ProteusComms.h"
 //## classInstance itsStarter
 #include "Starter.h"
 //## classInstance itsWheel
@@ -63,8 +63,8 @@ Car itsCar;
 //## classInstance itsEngine
 Engine itsEngine;
 
-//## classInstance itsProteusRhapsody
-ProteusRhapsody itsProteusRhapsody;
+//## classInstance itsProteusComms
+ProteusComms itsProteusComms;
 
 //## classInstance itsStarter
 Starter itsStarter;
@@ -88,13 +88,20 @@ void Default_initRelations() {
         {
             itsEngine.setShouldDelete(false);
         }
-        {
-            itsProteusRhapsody.setShouldDelete(false);
-        }
     }
     itsStarter.setItsEngine(&itsEngine);
     itsEngine.setItsCar(&itsCar);
     itsWheel.setItsCar(&itsCar);
+    {
+        
+        itsEngine.get_pCommsEngine()->setItsIProteusComms(itsProteusComms.get_pComms()->getItsIProteusComms());
+        
+    }
+    {
+        
+        itsStarter.get_pCommsStarter()->setItsIProteusComms(itsProteusComms.get_pComms()->getItsIProteusComms());
+        
+    }
     
     #ifdef _OMINSTRUMENT
     RenameGlobalInstances();
@@ -104,7 +111,6 @@ void Default_initRelations() {
 bool Default_startBehavior() {
     bool done = true;
     done &= itsEngine.startBehavior();
-    done &= itsProteusRhapsody.startBehavior();
     done &= itsStarter.startBehavior();
     return done;
 }
@@ -118,7 +124,7 @@ static void RenameGlobalInstances() {
     OM_SET_INSTANCE_NAME(&itsEngine, Engine, "itsEngine", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsCar, Car, "itsCar", AOMNoMultiplicity);
     OM_SET_INSTANCE_NAME(&itsWheel, Wheel, "itsWheel", AOMNoMultiplicity);
-    OM_SET_INSTANCE_NAME(&itsProteusRhapsody, ProteusRhapsody, "itsProteusRhapsody", AOMNoMultiplicity);
+    OM_SET_INSTANCE_NAME(&itsProteusComms, ProteusComms, "itsProteusComms", AOMNoMultiplicity);
 }
 #endif // _OMINSTRUMENT
 

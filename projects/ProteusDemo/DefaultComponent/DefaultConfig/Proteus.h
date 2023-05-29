@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Proteus
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Proteus.h
 *********************************************************************/
 
@@ -18,7 +18,10 @@
 //## auto_generated
 #include "MQTTClient.h"
 //## auto_generated
-class ProteusRhapsody;
+class IProteusComms;
+
+//## auto_generated
+class ProteusComms;
 
 //## package Proteus
 

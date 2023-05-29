@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Starter
-//!	Generated Date	: Sun, 28, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Starter.h
 *********************************************************************/
 
@@ -27,6 +27,8 @@
 #include <oxf\state.h>
 //## auto_generated
 #include <oxf\event.h>
+//## class pCommsStarter_C
+#include "IProteusComms.h"
 //## link itsEngine
 class Engine;
 
@@ -40,10 +42,66 @@ class StarterComponent2;
 
 //## class Starter
 class Starter : public OMReactive {
-    ////    Friends    ////
-    
 public :
 
+//#[ ignore
+    //## package Default
+    class pCommsStarter_C : public IProteusComms {
+        ////    Constructors and destructors    ////
+        
+    public :
+    
+        //## auto_generated
+        pCommsStarter_C();
+        
+        //## auto_generated
+        virtual ~pCommsStarter_C();
+        
+        ////    Operations    ////
+        
+        //## auto_generated
+        virtual void SetCurrentState(OMString stateObjectId, const OMString& state);
+        
+        //## auto_generated
+        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, int data);
+        
+        //## auto_generated
+        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw = false);
+        
+        //## auto_generated
+        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, float data);
+        
+        //## auto_generated
+        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, bool data);
+        
+        //## auto_generated
+        IProteusComms* getItsIProteusComms();
+        
+        //## auto_generated
+        IProteusComms* getOutBound();
+        
+        ////    Additional operations    ////
+        
+        //## auto_generated
+        void setItsIProteusComms(IProteusComms* p_IProteusComms);
+    
+    protected :
+    
+        //## auto_generated
+        void cleanUpRelations();
+        
+        ////    Attributes    ////
+        
+        int _p_;		//## attribute _p_
+        
+        ////    Relations and components    ////
+        
+        IProteusComms* itsIProteusComms;		//## link itsIProteusComms
+    };
+//#]
+
+    ////    Friends    ////
+    
 #ifdef _OMINSTRUMENT
     friend class OMAnimatedStarter;
 #endif // _OMINSTRUMENT
@@ -57,6 +115,18 @@ public :
     ~Starter();
     
     ////    Additional operations    ////
+    
+    //## auto_generated
+    pCommsStarter_C* getPCommsStarter() const;
+    
+    //## auto_generated
+    pCommsStarter_C* get_pCommsStarter() const;
+    
+    //## auto_generated
+    OMString getPtStateObjectId() const;
+    
+    //## auto_generated
+    void setPtStateObjectId(OMString p_ptStateObjectId);
     
     //## auto_generated
     Engine* getItsEngine() const;
@@ -87,8 +157,16 @@ protected :
     //## auto_generated
     void cleanUpRelations();
     
+    ////    Attributes    ////
+    
+    OMString ptStateObjectId;		//## attribute ptStateObjectId
+    
     ////    Relations and components    ////
     
+//#[ ignore
+    pCommsStarter_C pCommsStarter;
+//#]
+
     Engine* itsEngine;		//## link itsEngine
     
     StarterComponent* itsStarterComponent;		//## link itsStarterComponent
@@ -161,6 +239,8 @@ class OMAnimatedStarter : virtual public AOMInstance {
     
 public :
 
+    virtual void serializeAttributes(AOMSAttributes* aomsAttributes) const;
+    
     virtual void serializeRelations(AOMSRelations* aomsRelations) const;
     
     //## statechart_method

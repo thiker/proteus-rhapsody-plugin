@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Engine
-//!	Generated Date	: Sat, 27, May 2023  
+//!	Generated Date	: Mon, 29, May 2023  
 	File Path	: DefaultComponent\DefaultConfig\Engine.cpp
 *********************************************************************/
 
@@ -25,7 +25,76 @@
 //## package Default
 
 //## class Engine
-Engine::Engine(IOxfActive* theActiveContext) {
+//#[ ignore
+Engine::pCommsEngine_C::pCommsEngine_C() : _p_(0) {
+    itsIProteusComms = NULL;
+}
+
+Engine::pCommsEngine_C::~pCommsEngine_C() {
+    cleanUpRelations();
+}
+
+void Engine::pCommsEngine_C::SetCurrentState(OMString stateObjectId, const OMString& state) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetCurrentState(stateObjectId,state);
+    }
+    
+}
+
+void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, int data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data,useDataRaw);
+    }
+    
+}
+
+void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, float data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, bool data) {
+    
+    if (itsIProteusComms != NULL) {
+        itsIProteusComms->SetStateData(stateObjectId,key,data);
+    }
+    
+}
+
+IProteusComms* Engine::pCommsEngine_C::getItsIProteusComms() {
+    return this;
+}
+
+IProteusComms* Engine::pCommsEngine_C::getOutBound() {
+    return this;
+}
+
+void Engine::pCommsEngine_C::setItsIProteusComms(IProteusComms* p_IProteusComms) {
+    itsIProteusComms = p_IProteusComms;
+}
+
+void Engine::pCommsEngine_C::cleanUpRelations() {
+    if(itsIProteusComms != NULL)
+        {
+            itsIProteusComms = NULL;
+        }
+}
+//#]
+
+Engine::Engine(IOxfActive* theActiveContext) : ptStateObjectId("testid") {
     NOTIFY_REACTIVE_CONSTRUCTOR(Engine, Engine(), 0, Default_Engine_Engine_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCar = NULL;
@@ -35,6 +104,22 @@ Engine::Engine(IOxfActive* theActiveContext) {
 Engine::~Engine() {
     NOTIFY_DESTRUCTOR(~Engine, true);
     cleanUpRelations();
+}
+
+Engine::pCommsEngine_C* Engine::getPCommsEngine() const {
+    return (Engine::pCommsEngine_C*) &pCommsEngine;
+}
+
+Engine::pCommsEngine_C* Engine::get_pCommsEngine() const {
+    return (Engine::pCommsEngine_C*) &pCommsEngine;
+}
+
+OMString Engine::getPtStateObjectId() const {
+    return ptStateObjectId;
+}
+
+void Engine::setPtStateObjectId(OMString p_ptStateObjectId) {
+    ptStateObjectId = p_ptStateObjectId;
 }
 
 Car* Engine::getItsCar() const {
@@ -105,6 +190,13 @@ void Engine::rootState_entDef() {
         NOTIFY_STATE_ENTERED("ROOT.Idle");
         rootState_subState = Idle;
         rootState_active = Idle;
+        //#[ state Idle.(Entry) 
+        OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Idle");
+        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-float", 0.123f);
+        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-int", 123);
+        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-data-raw", "123", true);
+        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-non-data-raw", "123", false);
+        //#]
         NOTIFY_TRANSITION_TERMINATED("2");
     }
 }
@@ -122,6 +214,9 @@ IOxfReactive::TakeEventStatus Engine::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.Running");
                     rootState_subState = Running;
                     rootState_active = Running;
+                    //#[ state Running.(Entry) 
+                    OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Running");
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("0");
                     res = eventConsumed;
                 }
@@ -138,6 +233,13 @@ IOxfReactive::TakeEventStatus Engine::rootState_processEvent() {
                     NOTIFY_STATE_ENTERED("ROOT.Idle");
                     rootState_subState = Idle;
                     rootState_active = Idle;
+                    //#[ state Idle.(Entry) 
+                    OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Idle");
+                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-float", 0.123f);
+                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-int", 123);
+                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-data-raw", "123", true);
+                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-non-data-raw", "123", false);
+                    //#]
                     NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;
                 }
@@ -152,6 +254,10 @@ IOxfReactive::TakeEventStatus Engine::rootState_processEvent() {
 
 #ifdef _OMINSTRUMENT
 //#[ ignore
+void OMAnimatedEngine::serializeAttributes(AOMSAttributes* aomsAttributes) const {
+    aomsAttributes->addAttribute("ptStateObjectId", x2String(myReal->ptStateObjectId));
+}
+
 void OMAnimatedEngine::serializeRelations(AOMSRelations* aomsRelations) const {
     aomsRelations->addRelation("itsCar", false, true);
     if(myReal->itsCar)
