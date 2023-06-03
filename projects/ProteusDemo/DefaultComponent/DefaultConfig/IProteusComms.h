@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: IProteusComms
-//!	Generated Date	: Mon, 29, May 2023  
+//!	Generated Date	: Sat, 3, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\IProteusComms.h
 *********************************************************************/
 
@@ -41,20 +41,20 @@ public :
     
     ////    Operations    ////
     
-    //## operation SetCurrentState(OMString,OMString)
-    virtual void SetCurrentState(OMString stateObjectId, const OMString& state) = 0;
+    //## operation SetStateDataBool(OMString,OMString,bool)
+    virtual void SetStateDataBool(const OMString& stateObjectId, const OMString& key, bool data) = 0;
     
-    //## operation SetStateData(OMString,OMString,int)
-    virtual void SetStateData(const OMString& stateObjectId, const OMString& key, int data) = 0;
+    //## operation SetStateDataNumber(OMString,OMString,int)
+    virtual void SetStateDataNumber(const OMString& stateObjectId, const OMString& key, int data) = 0;
     
-    //## operation SetStateData(OMString,OMString,OMString,bool)
-    virtual void SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw = false) = 0;
+    //## operation SetStateDataNumber(OMString,OMString,float)
+    virtual void SetStateDataNumber(const OMString& stateObjectId, const OMString& key, float data) = 0;
     
-    //## operation SetStateData(OMString,OMString,float)
-    virtual void SetStateData(const OMString& stateObjectId, const OMString& key, float data) = 0;
+    //## operation SetStateDataRaw(OMString,OMString,OMString)
+    virtual void SetStateDataRaw(const OMString& stateObjectId, const OMString& key, const OMString& data) = 0;
     
-    //## operation SetStateData(OMString,OMString,bool)
-    virtual void SetStateData(const OMString& stateObjectId, const OMString& key, bool data) = 0;
+    //## operation SetStateDataString(OMString,OMString,OMString)
+    virtual void SetStateDataString(const OMString& stateObjectId, const OMString& key, const OMString& data) = 0;
 };
 
 #ifdef _OMINSTRUMENT

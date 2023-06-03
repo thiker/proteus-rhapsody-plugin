@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ProteusComms
-//!	Generated Date	: Mon, 29, May 2023  
+//!	Generated Date	: Sat, 3, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\ProteusComms.cpp
 *********************************************************************/
 
@@ -20,23 +20,23 @@
 #define Proteus_ProteusComms_SendMqttMessage_SERIALIZE \
     aomsmethod->addAttribute("topic", x2String(topic));\
     aomsmethod->addAttribute("payload", x2String(payload));
-#define Proteus_ProteusComms_SetCurrentState_SERIALIZE \
-    aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
-    aomsmethod->addAttribute("state", x2String(state));
-#define Proteus_ProteusComms_SetStateData_SERIALIZE \
+#define Proteus_ProteusComms_SetStateDataBool_SERIALIZE \
     aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
     aomsmethod->addAttribute("key", x2String(key));\
     aomsmethod->addAttribute("data", x2String(data));
-#define OM_Proteus_ProteusComms_SetStateData_1_SERIALIZE \
+#define Proteus_ProteusComms_SetStateDataNumber_SERIALIZE \
     aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
     aomsmethod->addAttribute("key", x2String(key));\
     aomsmethod->addAttribute("data", x2String(data));
-#define OM_Proteus_ProteusComms_SetStateData_2_SERIALIZE \
+#define OM_Proteus_ProteusComms_SetStateDataNumber_1_SERIALIZE \
     aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
     aomsmethod->addAttribute("key", x2String(key));\
-    aomsmethod->addAttribute("data", x2String(data));\
-    aomsmethod->addAttribute("useDataRaw", x2String(useDataRaw));
-#define OM_Proteus_ProteusComms_SetStateData_3_SERIALIZE \
+    aomsmethod->addAttribute("data", x2String(data));
+#define Proteus_ProteusComms_SetStateDataRaw_SERIALIZE \
+    aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
+    aomsmethod->addAttribute("key", x2String(key));\
+    aomsmethod->addAttribute("data", x2String(data));
+#define Proteus_ProteusComms_SetStateDataString_SERIALIZE \
     aomsmethod->addAttribute("stateObjectId", x2String(stateObjectId));\
     aomsmethod->addAttribute("key", x2String(key));\
     aomsmethod->addAttribute("data", x2String(data));
@@ -59,42 +59,42 @@ ProteusComms::pComms_C::~pComms_C() {
     cleanUpRelations();
 }
 
-void ProteusComms::pComms_C::SetCurrentState(OMString stateObjectId, const OMString& state) {
+void ProteusComms::pComms_C::SetStateDataBool(const OMString& stateObjectId, const OMString& key, bool data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetCurrentState(stateObjectId,state);
+        itsIProteusComms->SetStateDataBool(stateObjectId,key,data);
     }
     
 }
 
-void ProteusComms::pComms_C::SetStateData(const OMString& stateObjectId, const OMString& key, int data) {
+void ProteusComms::pComms_C::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, int data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataNumber(stateObjectId,key,data);
     }
     
 }
 
-void ProteusComms::pComms_C::SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw) {
+void ProteusComms::pComms_C::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, float data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data,useDataRaw);
+        itsIProteusComms->SetStateDataNumber(stateObjectId,key,data);
     }
     
 }
 
-void ProteusComms::pComms_C::SetStateData(const OMString& stateObjectId, const OMString& key, float data) {
+void ProteusComms::pComms_C::SetStateDataRaw(const OMString& stateObjectId, const OMString& key, const OMString& data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataRaw(stateObjectId,key,data);
     }
     
 }
 
-void ProteusComms::pComms_C::SetStateData(const OMString& stateObjectId, const OMString& key, bool data) {
+void ProteusComms::pComms_C::SetStateDataString(const OMString& stateObjectId, const OMString& key, const OMString& data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataString(stateObjectId,key,data);
     }
     
 }
@@ -153,7 +153,7 @@ void ProteusComms::DestroyClient() {
     //#]
 }
 
-void ProteusComms::Init() {
+bool ProteusComms::Init() {
     NOTIFY_OPERATION(Init, Init(), 0, Proteus_ProteusComms_Init_SERIALIZE);
     //#[ operation Init()
     #define TOPIC       "MQTT Examples"
@@ -168,6 +168,7 @@ void ProteusComms::Init() {
         MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTCLIENT_SUCCESS)
     {
          printf("Failed to create client, return code %d\n", rc);
+         return false;
     }
      
     conn_opts.keepAliveInterval = 20;
@@ -176,10 +177,13 @@ void ProteusComms::Init() {
     {
         isConnected = false;
         printf("Failed to connect, return code %d\n", rc);
+        return false;
     } else {
         isConnected = true;
         printf("Succesfully connected mqtt client");
     }
+    
+    return true;
     //#]
 }
 
@@ -187,8 +191,11 @@ void ProteusComms::SendMqttMessage(const OMString& topic, const OMString& payloa
     NOTIFY_OPERATION(SendMqttMessage, SendMqttMessage(const OMString&,const OMString&), 2, Proteus_ProteusComms_SendMqttMessage_SERIALIZE);
     //#[ operation SendMqttMessage(OMString,OMString)
     if (!isConnected) {
-      std::cout << "Trying to send message but client is not connected";
-      Init();
+      std::cout << "Trying to send message but client is not connected. Running Init..." << std::endl;
+      if (!Init()) {
+        std::cout << "Tried Init but no success. Aborting.." << std::endl;
+      	return;
+      }
     }
     OMString topic_string = topic;
     OMString payload_string = payload;
@@ -215,54 +222,48 @@ void ProteusComms::SendMqttMessage(const OMString& topic, const OMString& payloa
          exit(EXIT_FAILURE);
     }
      
-    printf("Waiting for up to %d seconds for publication of %s\n"
-            "on topic %s for client with ClientID: %s\n",
-            (int)(TIMEOUT/1000), c_payload , c_topic, CLIENTID);
+    //printf("Waiting for up to %d seconds for publication of %s\n"
+    //        "on topic %s for client with ClientID: %s\n",
+    //        (int)(TIMEOUT/1000), c_payload , c_topic, CLIENTID);
     rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);
-    printf("Message with delivery token %d delivered\n", token);
+    //printf("Message with delivery token %d delivered\n", token);
      
     //#]
 }
 
-void ProteusComms::SetStateData(const OMString& stateObjectId, const OMString& key, int data) {
-    NOTIFY_OPERATION(SetStateData, SetStateData(const OMString&,const OMString&,int), 3, Proteus_ProteusComms_SetStateData_SERIALIZE);
-    //#[ operation SetStateData(OMString,OMString,int)
+void ProteusComms::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, int data) {
+    NOTIFY_OPERATION(SetStateDataNumber, SetStateDataNumber(const OMString&,const OMString&,int), 3, Proteus_ProteusComms_SetStateDataNumber_SERIALIZE);
+    //#[ operation SetStateDataNumber(OMString,OMString,int)
     OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
-    OMString payload =  "{ \"Id\":\"" + stateObjectId + "\", \""+ key +"\": " + std::to_string(data).c_str() + "}";
+    OMString payload =  "{ \"StateId\":\"" + stateObjectId + "\", \"key\" : \""+ key +"\", \"value\": " + std::to_string(data).c_str()  + "}";
     SendMqttMessage(topic, payload);
     //#]
 }
 
-void ProteusComms::SetStateData(const OMString& stateObjectId, const OMString& key, float data) {
-    NOTIFY_OPERATION(SetStateData, SetStateData(const OMString&,const OMString&,float), 3, OM_Proteus_ProteusComms_SetStateData_1_SERIALIZE);
-    //#[ operation SetStateData(OMString,OMString,float)
+void ProteusComms::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, float data) {
+    NOTIFY_OPERATION(SetStateDataNumber, SetStateDataNumber(const OMString&,const OMString&,float), 3, OM_Proteus_ProteusComms_SetStateDataNumber_1_SERIALIZE);
+    //#[ operation SetStateDataNumber(OMString,OMString,float)
     OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
-    OMString payload =  "{ \"Id\":\""+ stateObjectId + "\", \""+ key +"\": " + std::to_string(data).c_str()  + "}";
+    OMString payload =  "{ \"StateId\":\"" + stateObjectId + "\", \"key\" : \""+ key +"\", \"value\": " + std::to_string(data).c_str()  + "}";
     SendMqttMessage(topic, payload);
     //#]
 }
 
-void ProteusComms::SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw) {
-    NOTIFY_OPERATION(SetStateData, SetStateData(const OMString&,const OMString&,const OMString&,bool), 4, OM_Proteus_ProteusComms_SetStateData_2_SERIALIZE);
-    //#[ operation SetStateData(OMString,OMString,OMString,bool)
-    OMString topic;
-    OMString payload;
+void ProteusComms::SetStateDataBool(const OMString& stateObjectId, const OMString& key, bool data) {
+    NOTIFY_OPERATION(SetStateDataBool, SetStateDataBool(const OMString&,const OMString&,bool), 3, Proteus_ProteusComms_SetStateDataBool_SERIALIZE);
+    //#[ operation SetStateDataBool(OMString,OMString,bool)
+    OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
     
-    topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
+    OMString boolString = "null";
     
-    if (useDataRaw) {
-        payload =  "{ \"Id\":\"" + stateObjectId + "\", \""+ key +"\": " + data + "}";
+    if (data) {
+      boolString = "true";
     } else {
-        payload =  "{ \"Id\":\"" + stateObjectId + "\", \""+ key +"\": \"" + data + "\"}";
+      boolString = "false";
     }
     
+    OMString payload =  "{ \"StateId\":\"" + stateObjectId + "\", \"key\" : \""+ key +"\", \"value\": " + boolString  + "}";
     SendMqttMessage(topic, payload);
-    //#]
-}
-
-void ProteusComms::SetStateData(const OMString& stateObjectId, const OMString& key, bool data) {
-    NOTIFY_OPERATION(SetStateData, SetStateData(const OMString&,const OMString&,bool), 3, OM_Proteus_ProteusComms_SetStateData_3_SERIALIZE);
-    //#[ operation SetStateData(OMString,OMString,bool)
     //#]
 }
 
@@ -332,11 +333,24 @@ void ProteusComms::initRelations() {
     }
 }
 
-void ProteusComms::SetCurrentState(OMString stateObjectId, const OMString& state) {
-    NOTIFY_OPERATION(SetCurrentState, SetCurrentState(OMString,const OMString&), 2, Proteus_ProteusComms_SetCurrentState_SERIALIZE);
-    //#[ operation SetCurrentState(OMString,OMString)
-    OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId;
-    OMString payload =  "{ \"currentState\": \"" + state + "\"}";
+void ProteusComms::SetStateDataRaw(const OMString& stateObjectId, const OMString& key, const OMString& data) {
+    NOTIFY_OPERATION(SetStateDataRaw, SetStateDataRaw(const OMString&,const OMString&,const OMString&), 3, Proteus_ProteusComms_SetStateDataRaw_SERIALIZE);
+    //#[ operation SetStateDataRaw(OMString,OMString,OMString)
+    OMString topic;
+    OMString payload;
+    
+    topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
+    payload =  "{ \"StateId\":\"" + stateObjectId + "\", \"key\" : \""+ key +"\", \"value\" : " + data + "}";
+    
+    SendMqttMessage(topic, payload);
+    //#]
+}
+
+void ProteusComms::SetStateDataString(const OMString& stateObjectId, const OMString& key, const OMString& data) {
+    NOTIFY_OPERATION(SetStateDataString, SetStateDataString(const OMString&,const OMString&,const OMString&), 3, Proteus_ProteusComms_SetStateDataString_SERIALIZE);
+    //#[ operation SetStateDataString(OMString,OMString,OMString)
+    OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + "/" + key;
+    OMString payload =  "{ \"StateId\":\"" + stateObjectId + "\", \"key\" : \""+ key +"\", \"value\" : \"" + data + "\"}";
     SendMqttMessage(topic, payload);
     //#]
 }

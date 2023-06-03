@@ -12,10 +12,10 @@
 			<_id type="a">GUID dca1e643-3b13-42df-a6b7-0191bb3d7596</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Proteus</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:17</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:17</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:11:15</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::12:38:38</_modifiedTime>
 			<_lastID type="a">7</_lastID>
-			<weakCGTime type="a">5.29.2023::18:34:17</weakCGTime>
+			<weakCGTime type="a">6.3.2023::11:11:15</weakCGTime>
 			<strongCGTime type="a">5.28.2023::21:22:11</strongCGTime>
 			<_defaultComposite type="s">GUID e527cf1d-426c-41d9-8040-249d3c1e8c7f</_defaultComposite>
 			<_eventsBaseID type="a">-1</_eventsBaseID>
@@ -1906,15 +1906,6 @@
 			<m_displayOption type="a">Public</m_displayOption>
 			<m_bShowInherited type="a">0</m_bShowInherited>
 			<m_bOrdered type="a">0</m_bOrdered>
-			<_itemValueOfFontPropertiesMapCount type="a">8</_itemValueOfFontPropertiesMapCount>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
-			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
 		</CGICompartment>
 		<CGIPortConnector type="e">
 			<_id type="a">GUID e9ee77ee-9d20-4d7a-9475-f92134655d04</_id>
@@ -2381,6 +2372,7 @@
 			</m_sourceRole>
 			<m_targetRole type="p">
 				<CGIText type="e">
+					<m_str type="a">itsEngine</m_str>
 					<m_style type="a">Arial; 10 0 0 0 1 </m_style>
 					<m_color type="p">
 						<IColor type="e">
@@ -3121,7 +3113,7 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">ProteusComms</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:46</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.3.2023::12:47:29</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -3131,18 +3123,14 @@
 					<_hid type="a">GUID 21952d4b-6f42-4fb3-ab5d-2a9dbea53baf</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.29.2023::18:34:46</_modifiedTime>
+			<_modifiedTime type="a">6.3.2023::12:47:29</_modifiedTime>
 			<_lastID type="a">26</_lastID>
-			<weakCGTime type="a">5.29.2023::18:34:46</weakCGTime>
+			<weakCGTime type="a">6.3.2023::12:47:29</weakCGTime>
 			<strongCGTime type="a">5.29.2023::18:30:22</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
 			</_itsStateChart>
-			<Associations type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Associations>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
 				<value>GUID 7851bfe0-3d92-4e10-8156-9712e78d39a7</value>
@@ -3151,9 +3139,9 @@
 				<value>GUID c04fd210-d557-41a9-ac5a-307df429b204</value>
 				<value>GUID 0b59bd58-29ff-4b06-a24a-32af7722e8c2</value>
 				<value>GUID a238d4bd-2317-4405-9809-0fbead515c28</value>
-				<value>GUID 99b9f8ea-7ab8-4cf3-a6c9-2754dd4ac9db</value>
 				<value>GUID 1a87d2c2-e600-426a-8985-d322332c8331</value>
-				<value>GUID 22b6f364-3b03-4077-8140-cd57cf80b212</value>
+				<value>GUID d6f85071-3834-44ab-9549-b99ad7431633</value>
+				<value>GUID 3df25613-fab4-4395-96af-41f733b48f9a</value>
 				<value>GUID 307f7bb1-6b1b-4975-a473-ce9b3e2763d6</value>
 				<value>GUID c3e95d88-c96b-4da5-9275-53c78c385a0f</value>
 				<value>GUID 9aafba3e-408c-45f7-b499-a052dc8d9940</value>
@@ -3228,8 +3216,8 @@ MQTTClient_destroy(&amp;client);</_bodyData>
 			<_id type="a">GUID 58bfc2a3-c4a4-4ff1-81b6-9240ece6cc26</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Init</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:47:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:47:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::12:47:14</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::12:47:14</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -3239,8 +3227,8 @@ MQTTClient_destroy(&amp;client);</_bodyData>
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
 					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">void</_hname>
-					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
+					<_hname type="a">bool</_hname>
+					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
 				</IHandle>
 			</_returnType>
 			<_abstract type="a">0</_abstract>
@@ -3262,6 +3250,7 @@ if ((rc = MQTTClient_create(&amp;client, ADDRESS, CLIENTID,%0D
     MQTTCLIENT_PERSISTENCE_NONE, NULL)) != MQTTCLIENT_SUCCESS)%0D
 {%0D
      printf(&quot;Failed to create client, return code %25d\n&quot;, rc);%0D
+     return false;%0D
 }%0D
  %0D
 conn_opts.keepAliveInterval = 20;%0D
@@ -3270,10 +3259,13 @@ if ((rc = MQTTClient_connect(client, &amp;conn_opts)) != MQTTCLIENT_SUCCESS)%0D
 {%0D
     isConnected = false;%0D
     printf(&quot;Failed to connect, return code %25d\n&quot;, rc);%0D
+    return false;%0D
 } else {%0D
     isConnected = true;%0D
     printf(&quot;Succesfully connected mqtt client&quot;);%0D
-}</_bodyData>
+}%0D
+%0D
+return true;</_bodyData>
 			</IBody>
 			</_itsBody>
 		</IPrimitiveOperation>
@@ -3281,8 +3273,8 @@ if ((rc = MQTTClient_connect(client, &amp;conn_opts)) != MQTTCLIENT_SUCCESS)%0D
 			<_id type="a">GUID c04fd210-d557-41a9-ac5a-307df429b204</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">SendMqttMessage</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:32:53</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:32:53</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::12:47:29</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::12:47:29</_modifiedTime>
 			<_lastID type="a">2</_lastID>
 			<_virtual type="a">0</_virtual>
 			<_returnType type="r">
@@ -3301,8 +3293,11 @@ if ((rc = MQTTClient_connect(client, &amp;conn_opts)) != MQTTCLIENT_SUCCESS)%0D
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
 				<_bodyData type="a">if (!isConnected) {%0D
-  std::cout &lt;&lt; &quot;Trying to send message but client is not connected&quot;;%0D
-  Init();%0D
+  std::cout &lt;&lt; &quot;Trying to send message but client is not connected. Running Init...&quot; &lt;&lt; std::endl;%0D
+  if (!Init()) {%0D
+    std::cout &lt;&lt; &quot;Tried Init but no success. Aborting..&quot; &lt;&lt; std::endl;%0D
+  	return;%0D
+  }%0D
 }%0D
 OMString topic_string = topic;%0D
 OMString payload_string = payload;%0D
@@ -3329,11 +3324,11 @@ if ((rc = MQTTClient_publishMessage(client, c_topic, &amp;pubmsg, &amp;token)) !
      exit(EXIT_FAILURE);%0D
 }%0D
  %0D
-printf(&quot;Waiting for up to %25d seconds for publication of %25s\n&quot;%0D
-        &quot;on topic %25s for client with ClientID: %25s\n&quot;,%0D
-        (int)(TIMEOUT/1000), c_payload , c_topic, CLIENTID);%0D
+//printf(&quot;Waiting for up to %25d seconds for publication of %25s\n&quot;%0D
+//        &quot;on topic %25s for client with ClientID: %25s\n&quot;,%0D
+//        (int)(TIMEOUT/1000), c_payload , c_topic, CLIENTID);%0D
 rc = MQTTClient_waitForCompletion(client, token, TIMEOUT);%0D
-printf(&quot;Message with delivery token %25d delivered\n&quot;, token);%0D
+//printf(&quot;Message with delivery token %25d delivered\n&quot;, token);%0D
  </_bodyData>
 			</IBody>
 			</_itsBody>
@@ -3409,9 +3404,9 @@ printf(&quot;Message with delivery token %25d delivered\n&quot;, token);%0D
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:7:29</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:7:29</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:55:19</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:55:19</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">1</_virtual>
 			<_returnType type="r">
@@ -3430,7 +3425,7 @@ printf(&quot;Message with delivery token %25d delivered\n&quot;, token);%0D
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
 				<_bodyData type="a">OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
-OMString payload =  &quot;{ \&quot;Id\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;&quot;+ key +&quot;\&quot;: &quot; + std::to_string(data).c_str() + &quot;}&quot;;%0D
+OMString payload =  &quot;{ \&quot;StateId\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;key\&quot; : \&quot;&quot;+ key +&quot;\&quot;, \&quot;value\&quot;: &quot; + std::to_string(data).c_str()  + &quot;}&quot;;%0D
 SendMqttMessage(topic, payload);</_bodyData>
 			</IBody>
 			</_itsBody>
@@ -3527,9 +3522,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:7:35</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:7:35</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:55:8</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:55:8</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<_virtual type="a">1</_virtual>
 			<_returnType type="r">
@@ -3548,7 +3543,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
 				<_bodyData type="a">OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
-OMString payload =  &quot;{ \&quot;Id\&quot;:\&quot;&quot;+ stateObjectId + &quot;\&quot;, \&quot;&quot;+ key +&quot;\&quot;: &quot; + std::to_string(data).c_str()  + &quot;}&quot;;%0D
+OMString payload =  &quot;{ \&quot;StateId\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;key\&quot; : \&quot;&quot;+ key +&quot;\&quot;, \&quot;value\&quot;: &quot; + std::to_string(data).c_str()  + &quot;}&quot;;%0D
 SendMqttMessage(topic, payload);</_bodyData>
 			</IBody>
 			</_itsBody>
@@ -3613,162 +3608,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
 		<IPrimitiveOperation type="e">
-			<_id type="a">GUID 99b9f8ea-7ab8-4cf3-a6c9-2754dd4ac9db</_id>
-			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Operation</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">Kind</_Name>
-													<_Value type="a">common</_Value>
-													<_Type type="a">Enum</_Type>
-													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:21:43</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:21:43</_modifiedTime>
-			<_lastID type="a">4</_lastID>
-			<_virtual type="a">1</_virtual>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">void</_hname>
-					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-			<_static type="a">0</_static>
-			<_constant type="a">0</_constant>
-			<_itsBody type="p"><IBody type="e">
-				<_bodyData type="a">OMString topic;%0D
-OMString payload;%0D
-%0D
-topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
-%0D
-if (useDataRaw) {%0D
-    payload =  &quot;{ \&quot;Id\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;&quot;+ key +&quot;\&quot;: &quot; + data + &quot;}&quot;;%0D
-} else {%0D
-    payload =  &quot;{ \&quot;Id\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;&quot;+ key +&quot;\&quot;: \&quot;&quot; + data + &quot;\&quot;}&quot;;%0D
-}%0D
-%0D
-SendMqttMessage(topic, payload);</_bodyData>
-			</IBody>
-			</_itsBody>
-			<AggregatesList type="e">
-				<value>GUID 26bab847-e8c6-40fa-9b9b-2babac671d92</value>
-				<value>GUID 640e81a8-ff07-4c1a-89b2-5a21656b326f</value>
-				<value>GUID 58a9ff87-c1fa-4ba9-9b63-5647a83818d7</value>
-				<value>GUID a0268275-1332-4be4-a0ae-a238cd205036</value>
-			</AggregatesList>
-		</IPrimitiveOperation>
-		<IArgument type="e">
-			<_id type="a">GUID 26bab847-e8c6-40fa-9b9b-2babac671d92</_id>
-			<_myState type="a">8192</_myState>
-			<_rmmServerID type="a">-1</_rmmServerID>
-			<_name type="a">stateObjectId</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:50:38</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:50:38</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">OMString</_hname>
-					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-		</IArgument>
-		<IArgument type="e">
-			<_id type="a">GUID 640e81a8-ff07-4c1a-89b2-5a21656b326f</_id>
-			<_myState type="a">8192</_myState>
-			<_rmmServerID type="a">-1</_rmmServerID>
-			<_name type="a">key</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:50:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:50:45</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">OMString</_hname>
-					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-		</IArgument>
-		<IArgument type="e">
-			<_id type="a">GUID 58a9ff87-c1fa-4ba9-9b63-5647a83818d7</_id>
-			<_myState type="a">8192</_myState>
-			<_rmmServerID type="a">-1</_rmmServerID>
-			<_name type="a">data</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:50:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:50:58</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">OMString</_hname>
-					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-		</IArgument>
-		<IArgument type="e">
-			<_id type="a">GUID a0268275-1332-4be4-a0ae-a238cd205036</_id>
-			<_myState type="a">8192</_myState>
-			<_rmmServerID type="a">-1</_rmmServerID>
-			<_name type="a">useDataRaw</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:19:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:19:37</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">bool</_hname>
-					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-			<AggregatesList type="e">
-				<value>GUID 11f6597a-3500-4ce0-8524-df11a26a68e8</value>
-			</AggregatesList>
-		</IArgument>
-		<ILiteralSpecification type="e">
-			<_id type="a">GUID 11f6597a-3500-4ce0-8524-df11a26a68e8</_id>
-			<_rmmServerID type="a">-1</_rmmServerID>
-			<_modifiedTimeWeak type="a">5.29.2023::18:19:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:19:37</_modifiedTime>
-			<_value type="a">false</_value>
-		</ILiteralSpecification>
-		<IPrimitiveOperation type="e">
 			<_id type="a">GUID 1a87d2c2-e600-426a-8985-d322332c8331</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
@@ -3801,9 +3640,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:20:13</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:20:13</_modifiedTime>
+			<_name type="a">SetStateDataBool</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:54:36</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:54:36</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">1</_virtual>
 			<_returnType type="r">
@@ -3821,6 +3660,18 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_static type="a">0</_static>
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a">OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
+%0D
+OMString boolString = &quot;null&quot;;%0D
+%0D
+if (data) {%0D
+  boolString = &quot;true&quot;;%0D
+} else {%0D
+  boolString = &quot;false&quot;;%0D
+}%0D
+%0D
+OMString payload =  &quot;{ \&quot;StateId\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;key\&quot; : \&quot;&quot;+ key +&quot;\&quot;, \&quot;value\&quot;: &quot; + boolString  + &quot;}&quot;;%0D
+SendMqttMessage(topic, payload);</_bodyData>
 			</IBody>
 			</_itsBody>
 			<AggregatesList type="e">
@@ -3884,7 +3735,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
 		<IPrimitiveOperation type="e">
-			<_id type="a">GUID 22b6f364-3b03-4077-8140-cd57cf80b212</_id>
+			<_id type="a">GUID d6f85071-3834-44ab-9549-b99ad7431633</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -3916,9 +3767,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetCurrentState</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:46</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:46</_modifiedTime>
+			<_name type="a">SetStateDataRaw</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:55:40</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:55:40</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">1</_virtual>
 			<_returnType type="r">
@@ -3936,18 +3787,77 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_static type="a">0</_static>
 			<_constant type="a">0</_constant>
 			<_itsBody type="p"><IBody type="e">
-				<_bodyData type="a">OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId;%0D
-OMString payload =  &quot;{ \&quot;currentState\&quot;: \&quot;&quot; + state + &quot;\&quot;}&quot;;%0D
+				<_bodyData type="a">OMString topic;%0D
+OMString payload;%0D
+%0D
+topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
+payload =  &quot;{ \&quot;StateId\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;key\&quot; : \&quot;&quot;+ key +&quot;\&quot;, \&quot;value\&quot; : &quot; + data + &quot;}&quot;;%0D
+%0D
 SendMqttMessage(topic, payload);</_bodyData>
 			</IBody>
 			</_itsBody>
 			<AggregatesList type="e">
-				<value>GUID 4836f1ac-48eb-425a-9106-311546eca1e0</value>
-				<value>GUID 22821667-e75d-452d-95d3-f83da1348fd0</value>
+				<value>GUID 9604839a-d387-4361-8de2-a8914f042819</value>
+				<value>GUID 9c673626-71cc-4963-b633-e08f5d4b4224</value>
+				<value>GUID e0867e10-abc3-4c1b-8f5c-8f9213186dc1</value>
 			</AggregatesList>
 		</IPrimitiveOperation>
 		<IArgument type="e">
-			<_id type="a">GUID 4836f1ac-48eb-425a-9106-311546eca1e0</_id>
+			<_id type="a">GUID 9604839a-d387-4361-8de2-a8914f042819</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">stateObjectId</_name>
+			<_modifiedTimeWeak type="a">5.29.2023::17:50:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.29.2023::17:50:38</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IArgument type="e">
+			<_id type="a">GUID 9c673626-71cc-4963-b633-e08f5d4b4224</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">key</_name>
+			<_modifiedTimeWeak type="a">5.29.2023::17:50:45</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.29.2023::17:50:45</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IArgument type="e">
+			<_id type="a">GUID e0867e10-abc3-4c1b-8f5c-8f9213186dc1</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">data</_name>
+			<_modifiedTimeWeak type="a">5.29.2023::17:50:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">5.29.2023::17:50:58</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IPrimitiveOperation type="e">
+			<_id type="a">GUID 3df25613-fab4-4395-96af-41f733b48f9a</_id>
 			<_myState type="a">8192</_myState>
 			<_properties type="p"><IPropertyContainer type="e">
 				<Subjects type="c">
@@ -3957,13 +3867,14 @@ SendMqttMessage(topic, payload);</_bodyData>
 							<Metaclasses type="c">
 								<IRPYRawContainer type="e">
 									<IPropertyMetaclass type="e">
-										<_Name type="a">Type</_Name>
+										<_Name type="a">Operation</_Name>
 										<Properties type="c">
 											<IRPYRawContainer type="e">
 												<IProperty type="e">
-													<_Name type="a">In</_Name>
-													<_Value type="a">$type</_Value>
-													<_Type type="a">String</_Type>
+													<_Name type="a">Kind</_Name>
+													<_Value type="a">common</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
 												</IProperty>
 												
 											</IRPYRawContainer>
@@ -3978,10 +3889,44 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
+			<_name type="a">SetStateDataString</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::12:43:48</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::12:43:48</_modifiedTime>
+			<_lastID type="a">3</_lastID>
+			<_virtual type="a">1</_virtual>
+			<_returnType type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">void</_hname>
+					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
+				</IHandle>
+			</_returnType>
+			<_abstract type="a">0</_abstract>
+			<_final type="a">0</_final>
+			<_concurrency type="a">Sequential</_concurrency>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_constant type="a">0</_constant>
+			<_itsBody type="p"><IBody type="e">
+				<_bodyData type="a">OMString topic = STATE_UPDATE_TOPIC_PREFIX + stateObjectId + &quot;/&quot; + key;%0D
+OMString payload =  &quot;{ \&quot;StateId\&quot;:\&quot;&quot; + stateObjectId + &quot;\&quot;, \&quot;key\&quot; : \&quot;&quot;+ key +&quot;\&quot;, \&quot;value\&quot; : \&quot;&quot; + data + &quot;\&quot;}&quot;;%0D
+SendMqttMessage(topic, payload);</_bodyData>
+			</IBody>
+			</_itsBody>
+			<AggregatesList type="e">
+				<value>GUID 25c24d38-7efa-411d-b9f6-dc6ba7d8bf0f</value>
+				<value>GUID 0e71d62a-0a21-4d2f-9462-b63c51552503</value>
+				<value>GUID cd2b8246-9b44-4ce4-8df8-b8f5ed578450</value>
+			</AggregatesList>
+		</IPrimitiveOperation>
+		<IArgument type="e">
+			<_id type="a">GUID 25c24d38-7efa-411d-b9f6-dc6ba7d8bf0f</_id>
+			<_myState type="a">8192</_myState>
 			<_rmmServerID type="a">-1</_rmmServerID>
 			<_name type="a">stateObjectId</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:15:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:15:5</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:19:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:19:27</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -3994,12 +3939,30 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
 		<IArgument type="e">
-			<_id type="a">GUID 22821667-e75d-452d-95d3-f83da1348fd0</_id>
+			<_id type="a">GUID 0e71d62a-0a21-4d2f-9462-b63c51552503</_id>
 			<_myState type="a">8192</_myState>
 			<_rmmServerID type="a">-1</_rmmServerID>
-			<_name type="a">state</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:14:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:14:57</_modifiedTime>
+			<_name type="a">key</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:20:1</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:20:1</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IArgument type="e">
+			<_id type="a">GUID cd2b8246-9b44-4ce4-8df8-b8f5ed578450</_id>
+			<_myState type="a">8192</_myState>
+			<_rmmServerID type="a">-1</_rmmServerID>
+			<_name type="a">data</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:19:55</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:19:55</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4277,12 +4240,8 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_id type="a">GUID 2b3cbc0b-7b74-402c-a659-1a098044c888</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">ProteusComms</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">implFile</m_type>
 			<AggregatesList type="e">
 				<value>GUID 2fd59041-aa9a-48c6-9410-91bb8ac791da</value>
@@ -4304,16 +4263,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID a8e25d64-5d91-42d0-a84f-8dc0d7997709</_id>
 			<_name type="a">ProteusComms</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">51</m_startRow>
 			<m_startCol_Short type="a">57</m_startCol_Short>
@@ -4338,7 +4293,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<value>GUID c8bc3c3d-7245-463f-9710-411fe881e317</value>
 				<value>GUID 448d7ca5-7e0f-4610-8519-2e61d33e01b7</value>
 				<value>GUID ba5b0556-e722-4e19-9daa-800e3557df55</value>
-				<value>GUID df1b3a34-4c2c-4d2b-b7c6-c574830391b4</value>
 				<value>GUID fd1b89c9-d301-4127-ae5c-e451ae1a280b</value>
 				<value>GUID 4612fe93-1c34-4562-bc77-df4bc365bd6b</value>
 				<value>GUID 0dccb37b-3e50-40be-b40f-70b352bc9869</value>
@@ -4374,10 +4328,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID c3e95d88-c96b-4da5-9275-53c78c385a0f</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 7155c63c-c99f-44bb-bb8e-12cd6e7d1e5a</_id>
@@ -4395,10 +4345,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 9aafba3e-408c-45f7-b499-a052dc8d9940</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 4dc435f1-89a3-4be0-ba0e-adb7ce908686</_id>
@@ -4416,10 +4362,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 7c0de2e4-2339-4c28-ac11-77d4ad72c296</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 7f6f2bd8-0498-4086-92c7-e0e9df69b455</_id>
@@ -4437,10 +4379,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 307f7bb1-6b1b-4975-a473-ce9b3e2763d6</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID aedf4a1d-be4a-4b14-a2d0-96da115d0335</_id>
@@ -4458,10 +4396,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 26d078b8-03b7-4ba0-99f5-47082ee24faa</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID e51cb88b-1919-4100-8c97-abcb3d842ab4</_id>
@@ -4478,10 +4412,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 35147f22-001f-424f-b65c-ab91811797b5</value>
 				<value>GUID 51f00b52-2eb9-415d-be27-19ca8794300f</value>
@@ -4492,7 +4422,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4509,7 +4439,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 9e609745-b9b2-49e9-b2b4-37c6510b9053</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">131</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4517,7 +4447,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4534,7 +4464,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 5b1807ed-e411-40ab-b8c3-98975504c92c</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">114</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -4552,10 +4482,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID becb0482-2c19-404a-b735-b72531d697da</value>
 				<value>GUID a63ae9b8-66f7-41b4-b337-f79aa0515749</value>
@@ -4566,7 +4492,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4583,7 +4509,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID ba768da2-0bc7-4664-a7fd-ff4599d36d2a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">136</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4591,7 +4517,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4608,7 +4534,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 5723b604-a1d3-40ee-84e8-1d35ed8738a5</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">31</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -4627,10 +4553,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 61712b69-6148-49dc-9bc8-65750a669c0b</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID fe8f0c8c-2df9-48b2-9f61-595f0d5654d2</value>
 				<value>GUID c5e082fc-9651-4d98-8304-4812f18d5c98</value>
@@ -4641,7 +4563,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4658,7 +4580,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID b9eebb0a-04eb-4646-a34d-8f6b689f7a53</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">140</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4666,7 +4588,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4683,7 +4605,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID bcaf1425-da89-4f55-9ebe-e100769eb6cd</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">36</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -4702,10 +4624,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 58bfc2a3-c4a4-4ff1-81b6-9240ece6cc26</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID b4364145-9724-4fb9-8a77-96fdbac30e27</value>
 				<value>GUID 956f6bb5-ca00-478a-9d2d-01d81cdeb693</value>
@@ -4716,7 +4634,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4733,7 +4651,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 3acb696c-9819-4acc-b4a2-41e7cf0a7bfc</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">154</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4741,7 +4659,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4758,7 +4676,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 1b2bac14-a21b-4dcf-9b62-b546eae84906</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">27</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -4777,10 +4695,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID c04fd210-d557-41a9-ac5a-307df429b204</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 1c9ec24c-4a08-43a6-ab37-3e7071d72735</value>
 				<value>GUID 93fd1f3d-71c8-47ea-a032-e6abe35343ae</value>
@@ -4791,7 +4705,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4808,7 +4722,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 9e70e719-f0a6-4d54-8a45-2b49bd5be2b7</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">184</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4816,7 +4730,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4833,14 +4747,14 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID dbf88840-9739-46e9-9c2d-3bc042128ea7</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">70</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID 448d7ca5-7e0f-4610-8519-2e61d33e01b7</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">232</m_startRow>
 			<m_startCol_Short type="a">95</m_startCol_Short>
@@ -4852,10 +4766,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 0b59bd58-29ff-4b06-a24a-32af7722e8c2</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 0e339afe-5933-4e9c-9b6e-f384adb8374c</value>
 				<value>GUID af7d6597-d11a-463c-8fb2-a3a48c24484e</value>
@@ -4866,7 +4776,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4883,7 +4793,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID bad3a534-04e1-4b3e-8699-9d3768ae332d</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">232</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4891,7 +4801,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4908,14 +4818,14 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 6ab5bcaa-1ed0-4b52-a835-fdb752eab334</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">95</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID ba5b0556-e722-4e19-9daa-800e3557df55</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:50</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">241</m_startRow>
 			<m_startCol_Short type="a">97</m_startCol_Short>
@@ -4927,10 +4837,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID a238d4bd-2317-4405-9809-0fbead515c28</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID aa658e0c-4510-4952-9821-6063ecaa4474</value>
 				<value>GUID 961224f8-86ed-4c49-9712-ecc666fb0681</value>
@@ -4941,7 +4847,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4958,7 +4864,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 8ad14aec-1bfa-427b-b6e3-144c0e97721b</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">241</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -4966,7 +4872,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -4983,89 +4889,14 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 3d62d482-2ab4-40f0-be9f-672f2402062a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">97</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
-			<_id type="a">GUID df1b3a34-4c2c-4d2b-b7c6-c574830391b4</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
-			<m_type type="a">implFragment</m_type>
-			<m_startRow type="a">250</m_startRow>
-			<m_startCol_Short type="a">124</m_startCol_Short>
-			<m_endRow type="a">266</m_endRow>
-			<m_endCol_Short type="a">1</m_endCol_Short>
-			<m_subject type="r">
-				<INObjectHandle type="e">
-					<_hm2Class type="a">IPrimitiveOperation</_hm2Class>
-					<_hid type="a">GUID 99b9f8ea-7ab8-4cf3-a6c9-2754dd4ac9db</_hid>
-				</INObjectHandle>
-			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
-			<AggregatesList type="e">
-				<value>GUID 009cd559-11b0-4ab5-9e84-2e3f660e0025</value>
-				<value>GUID d398cc04-ad11-4305-af62-04c213eb729b</value>
-			</AggregatesList>
-		</IFileFragment>
-		<ITag type="e">
-			<_id type="a">GUID 009cd559-11b0-4ab5-9e84-2e3f660e0025</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">BodyStartLine</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
-					<_hname type="a">RhpString</_hname>
-					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<AggregatesList type="e">
-				<value>GUID 4db9bb15-a1fa-448b-8280-e23b33a9bd25</value>
-			</AggregatesList>
-		</ITag>
-		<ILiteralSpecification type="e">
-			<_id type="a">GUID 4db9bb15-a1fa-448b-8280-e23b33a9bd25</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_value type="a">250</_value>
-		</ILiteralSpecification>
-		<ITag type="e">
-			<_id type="a">GUID d398cc04-ad11-4305-af62-04c213eb729b</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">BodyStartCol</_name>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypes</_hsubsystem>
-					<_hname type="a">RhpString</_hname>
-					<_hid type="a">GUID ae5e3720-4e3e-40f1-9346-9a8b4e501f35</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<AggregatesList type="e">
-				<value>GUID 126b8bf8-f396-489f-a66b-c5c6975470bf</value>
-			</AggregatesList>
-		</ITag>
-		<ILiteralSpecification type="e">
-			<_id type="a">GUID 126b8bf8-f396-489f-a66b-c5c6975470bf</_id>
-			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
-			<_value type="a">124</_value>
-		</ILiteralSpecification>
-		<IFileFragment type="e">
 			<_id type="a">GUID fd1b89c9-d301-4127-ae5c-e451ae1a280b</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataBool</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:44</_modifiedTime>
 			<m_type type="a">implFragment</m_type>
 			<m_startRow type="a">268</m_startRow>
 			<m_startCol_Short type="a">96</m_startCol_Short>
@@ -5077,10 +4908,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 1a87d2c2-e600-426a-8985-d322332c8331</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID e0001fe6-5647-4a2a-be1f-2c8d3ab3680e</value>
 				<value>GUID e2e5d7b4-ef15-4843-8426-ea8954a82544</value>
@@ -5091,7 +4918,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5108,7 +4935,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 633965f8-9d4e-4146-a4e7-5f800ae8d76e</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">268</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5116,7 +4943,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5133,7 +4960,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 386f1989-32c4-420a-9506-ff15ff275d91</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">96</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5151,10 +4978,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 23e615a0-f0e4-41e2-b0f3-b521609ce883</value>
 				<value>GUID ec816de6-33f7-4684-833a-2809754af491</value>
@@ -5165,7 +4988,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5182,7 +5005,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 9fa9cee2-e6b0-4cf2-89c5-b9becfd82ab8</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">274</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5190,7 +5013,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5207,7 +5030,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 1331cb82-9bc0-43bd-a031-84c9c94a02d3</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">57</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5225,10 +5048,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 74a45ab2-b6f0-42f6-993f-40ed50db32f3</value>
 				<value>GUID 1b06b0e0-701e-4c22-9c44-5c635bf10a8a</value>
@@ -5239,7 +5058,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5256,7 +5075,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 473cd7d0-3d2d-487a-99f9-44e2efa0b6e7</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">278</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5264,7 +5083,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5281,7 +5100,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 0b23ec16-d7f0-4bf1-a309-8a2e8a67d4bc</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">58</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5299,10 +5118,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID d60be317-e2d0-442f-a1b6-1187305445ce</value>
 				<value>GUID 7720d800-fcea-4cb2-a153-0076edefdc40</value>
@@ -5313,7 +5128,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5330,7 +5145,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID d2ad8a89-8b4b-4c97-8b5e-738eb156a481</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">282</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5338,7 +5153,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5355,7 +5170,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID c13866ab-028b-4e65-8e71-690e666a2e3f</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">40</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5373,10 +5188,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 5a72b0a6-7ea5-4ac4-bebc-0c0fc14a744e</value>
 				<value>GUID febb875b-35b8-426e-bc7b-8e0ce1266ee4</value>
@@ -5387,7 +5198,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5404,7 +5215,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID cbafb386-8b76-4eba-9206-a6b01a7d1477</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">286</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5412,7 +5223,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5429,7 +5240,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 193dbda8-54e2-4e5a-a68d-5c161ceb6361</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">41</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5447,10 +5258,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 5c1dc2b1-a6d0-4688-b6fa-9b5d58372d1c</value>
 				<value>GUID f80892e0-4b64-459e-9013-be2834a11e58</value>
@@ -5461,7 +5268,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5478,7 +5285,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 5599d1e6-ed81-4883-99dc-8a5c44b11fec</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">290</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5486,7 +5293,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5503,7 +5310,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID d888feb8-0ec0-4c41-b325-e1695b817cb7</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">34</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5521,10 +5328,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID c9a3b704-1e56-4b53-87f3-d594192c44ab</value>
 				<value>GUID f8516be8-5ac5-4573-942f-8730f5f3c9f2</value>
@@ -5535,7 +5338,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5552,7 +5355,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 95d7c258-3b28-4045-b203-337f7b11f18e</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">294</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5560,7 +5363,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5577,7 +5380,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID ec6cc268-0162-4963-b42d-fcacc762ab86</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">49</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5595,10 +5398,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID fe7ac48b-f001-4c40-8d78-8d4cd0337401</value>
 				<value>GUID e7c74b36-e567-4c8b-8cbf-3de04b09e685</value>
@@ -5609,7 +5408,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5626,7 +5425,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID cdb209f3-cb0e-4332-9a68-759d1d7dc486</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">298</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5634,7 +5433,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5651,7 +5450,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 0ac7c41a-911f-47ce-92a6-8cd4853702e9</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">67</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5669,10 +5468,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 2ffe4f95-4b95-4c30-9436-a8754b6d58b5</value>
 				<value>GUID a69af6b7-16a1-48d2-8259-00acde60dbc7</value>
@@ -5683,7 +5478,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5700,7 +5495,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 903a50d8-9281-48bb-a489-bbef343bbbc9</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">302</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5708,7 +5503,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5725,7 +5520,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 642279fa-2796-4fdb-b07b-74a3d9dc55bc</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">38</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5743,10 +5538,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID d0bf5201-4846-4813-a59a-639e01ccfb11</value>
 				<value>GUID 58d5793c-6b29-4f9a-ae77-df841eef49ae</value>
@@ -5757,7 +5548,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5774,7 +5565,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID cfc98c34-e7d3-4484-8876-ef9cd3ccfd8e</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">306</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5782,7 +5573,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5799,7 +5590,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 98eecfd1-71e9-4c55-b6be-ca7c43b9f8a6</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">51</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5817,10 +5608,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 5fb00fdf-9379-4cf3-9469-79804ddedb42</value>
 				<value>GUID bd088876-35a1-42e9-bbae-c8fc98a59318</value>
@@ -5831,7 +5618,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5848,7 +5635,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID b2615c06-a859-4061-8ae3-93a6cdda2db4</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">310</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5856,7 +5643,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5873,7 +5660,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID c3780417-93e8-488a-aaf9-bb0333fc0a4d</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">43</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5891,10 +5678,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 5982c761-6640-42e6-b27d-a28f285c23bf</value>
 				<value>GUID 490d0e89-6097-4dd8-aa6f-ffabc612506c</value>
@@ -5905,7 +5688,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5922,7 +5705,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 14c56a90-aab7-4845-8a81-e15234e4d42a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">314</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -5930,7 +5713,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5947,7 +5730,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 438a0719-c817-46ad-a8f7-dc1a23f36c57</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">55</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -5965,10 +5748,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 07531983-f246-4c67-9db4-f0285e2a3039</value>
 				<value>GUID 3cd480aa-d83e-4c56-aa5d-469b2a808838</value>
@@ -5979,7 +5758,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -5996,7 +5775,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID e833691a-2736-4656-a989-bada2ee18db0</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">318</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6004,7 +5783,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6021,7 +5800,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID ac9912c7-3ca8-4747-a0e7-6f671144fbd5</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">55</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -6039,10 +5818,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID b88908de-e820-4de7-abed-3af82103eff8</value>
 				<value>GUID 5aeeb7a0-682e-4f1a-b10f-3b80ef5ea73d</value>
@@ -6053,7 +5828,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6070,7 +5845,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID b25fc472-c5d5-4623-a965-f858f46db045</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">322</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6078,7 +5853,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6095,7 +5870,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID d09d2a1c-a7b9-4add-b268-998d4c035d03</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">75</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -6113,10 +5888,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 268c8e95-1ca4-4f3d-8278-5bcc047d14cc</value>
 				<value>GUID d6671bbc-391e-44c6-a19a-91688aee1392</value>
@@ -6127,7 +5898,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6144,7 +5915,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 1e55c0c5-dc6e-4858-bf24-93eb67207ee3</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">326</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6152,7 +5923,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6169,7 +5940,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 3c39b723-7c2c-4000-9ebb-a6459bcea01a</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">56</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -6187,10 +5958,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID b1043e7d-650e-4307-86d3-67af79b63aa7</value>
 				<value>GUID cfa1146a-ed93-402c-a6d3-179a396005b4</value>
@@ -6201,7 +5968,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6218,7 +5985,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID f27f17f4-fd6a-4a8e-acc1-983ead573da4</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">330</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6226,7 +5993,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6243,7 +6010,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 67de5511-b72c-409e-a1e0-47d3673d8063</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">77</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
@@ -6261,10 +6028,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 			<AggregatesList type="e">
 				<value>GUID 1dcc1242-abd0-4fd4-9c8c-e78a693af5d2</value>
 				<value>GUID fb911ed4-fb36-4072-9a34-ca28918e39cf</value>
@@ -6275,7 +6038,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6292,7 +6055,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID e77bc329-595a-4ca9-a49b-7d97abdb1545</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">334</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6300,7 +6063,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6317,19 +6080,15 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID bc9091d1-652c-4362-a2e9-bd7bb0d3b6b4</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">36</_value>
 		</ILiteralSpecification>
 		<IFile type="e">
 			<_id type="a">GUID a73d40e1-1616-4c35-a4d2-86e8f5638dc1</_id>
 			<_myState type="a">139264</_myState>
 			<_name type="a">ProteusComms</_name>
-			<OwnedDependencies type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</OwnedDependencies>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">specFile</m_type>
 			<AggregatesList type="e">
 				<value>GUID 28a85035-9d55-4099-b273-3d1e888c59a3</value>
@@ -6356,10 +6115,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 93b01553-5ab2-4577-a872-f5e36e7f9da2</_id>
@@ -6376,10 +6131,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 7414efa2-5404-4ad0-9617-5b382341aab2</_id>
@@ -6396,10 +6147,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 98d25c20-d386-4f07-a913-8a0b33df2e70</_id>
@@ -6416,10 +6163,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9647f877-bfe5-472c-af2e-807aecc00807</_id>
@@ -6436,10 +6179,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9ef5b554-4d36-474b-a2b5-7a51ca7206f8</_id>
@@ -6456,16 +6195,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f448179d-73b9-4e79-8a6f-094c13e9468c</_id>
 			<_name type="a">ProteusComms</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:34:41</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:34:41</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">29</m_startRow>
 			<m_startCol_Short type="a">1</m_startCol_Short>
@@ -6490,7 +6225,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<value>GUID ee62ccc8-2e28-4784-882b-90f336c34b10</value>
 				<value>GUID 9a7e4e04-291f-476d-95a8-8f6cd54ee01f</value>
 				<value>GUID 38145911-3d39-413c-8fb0-0c21f39178f1</value>
-				<value>GUID 99d9d323-50b6-4db6-a2c5-2fec4bc56b1a</value>
 				<value>GUID 542e5ad9-0d4b-4ddd-9f37-87e64ba635ce</value>
 				<value>GUID fb455b48-eb94-4282-9ef5-9b41448f8ef1</value>
 				<value>GUID 2d5d0728-69e2-4647-aae0-9f7f2488f2a0</value>
@@ -6527,7 +6261,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartLine</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6544,7 +6278,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID 5ca65b49-eda5-4bbe-8a49-0ac7e7131feb</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">29</_value>
 		</ILiteralSpecification>
 		<ITag type="e">
@@ -6552,7 +6286,7 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_myState type="a">8192</_myState>
 			<_name type="a">BodyStartCol</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_typeOf type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IType</_hm2Class>
@@ -6569,14 +6303,14 @@ SendMqttMessage(topic, payload);</_bodyData>
 		<ILiteralSpecification type="e">
 			<_id type="a">GUID b00c8747-6d81-41bd-9192-602afa728354</_id>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<_value type="a">43</_value>
 		</ILiteralSpecification>
 		<IFileFragment type="e">
 			<_id type="a">GUID a9b14bcc-647d-4807-b638-9ccdbac22d69</_id>
 			<_name type="a">////    Friends    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Friends    ////
 </m_text>
@@ -6588,16 +6322,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID a4c6f4f4-a9bc-4ec0-9707-da1ea944dfb6</_id>
 			<_name type="a">////    Constructors and destructors    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Constructors and destructors    ////
 </m_text>
@@ -6609,10 +6339,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 657c0be2-4349-43cc-b055-0cbb2887c86f</_id>
@@ -6629,10 +6355,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 4298d151-62ae-4845-a085-d1d7baedbc6a</_id>
@@ -6649,16 +6371,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 331eab42-10f7-4962-a331-c27c4ca4cfc7</_id>
 			<_name type="a">////    Operations    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Operations    ////
 </m_text>
@@ -6670,10 +6388,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ef39333e-6091-4f77-8fe0-68457dd2b2e6</_id>
@@ -6691,10 +6405,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 61712b69-6148-49dc-9bc8-65750a669c0b</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID c7b6aad3-290f-468c-882f-9b118380afde</_id>
@@ -6712,10 +6422,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 58bfc2a3-c4a4-4ff1-81b6-9240ece6cc26</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ee62ccc8-2e28-4784-882b-90f336c34b10</_id>
@@ -6733,16 +6439,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID c04fd210-d557-41a9-ac5a-307df429b204</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9a7e4e04-291f-476d-95a8-8f6cd54ee01f</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:58</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">117</m_startRow>
 			<m_startCol_Short type="a">18</m_startCol_Short>
@@ -6754,16 +6456,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 0b59bd58-29ff-4b06-a24a-32af7722e8c2</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 38145911-3d39-413c-8fb0-0c21f39178f1</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:50</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:50</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">120</m_startRow>
 			<m_startCol_Short type="a">18</m_startCol_Short>
@@ -6775,37 +6473,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID a238d4bd-2317-4405-9809-0fbead515c28</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
-		</IFileFragment>
-		<IFileFragment type="e">
-			<_id type="a">GUID 99d9d323-50b6-4db6-a2c5-2fec4bc56b1a</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
-			<m_type type="a">specFragment</m_type>
-			<m_startRow type="a">123</m_startRow>
-			<m_startCol_Short type="a">18</m_startCol_Short>
-			<m_endRow type="a">123</m_endRow>
-			<m_endCol_Short type="a">129</m_endCol_Short>
-			<m_subject type="r">
-				<INObjectHandle type="e">
-					<_hm2Class type="a">IPrimitiveOperation</_hm2Class>
-					<_hid type="a">GUID 99b9f8ea-7ab8-4cf3-a6c9-2754dd4ac9db</_hid>
-				</INObjectHandle>
-			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 542e5ad9-0d4b-4ddd-9f37-87e64ba635ce</_id>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:25:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:25:57</_modifiedTime>
+			<_name type="a">SetStateDataBool</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:44</_modifiedTime>
 			<m_type type="a">specFragment</m_type>
 			<m_startRow type="a">126</m_startRow>
 			<m_startCol_Short type="a">18</m_startCol_Short>
@@ -6817,16 +6490,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 1a87d2c2-e600-426a-8985-d322332c8331</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID fb455b48-eb94-4282-9ef5-9b41448f8ef1</_id>
 			<_name type="a">////    Additional operations    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Additional operations    ////
 </m_text>
@@ -6838,10 +6507,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 2d5d0728-69e2-4647-aae0-9f7f2488f2a0</_id>
@@ -6858,10 +6523,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID f19dd44a-68c0-4000-bfb1-b3b190d2acf9</_id>
@@ -6878,10 +6539,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 05013b9d-6b53-49a3-b094-5d8ce0e8fc31</_id>
@@ -6898,10 +6555,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9206c67e-8202-4172-8f41-7446c65bd14c</_id>
@@ -6918,10 +6571,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 55f38690-20b6-490f-9bc5-c2fc4c9aae84</_id>
@@ -6938,10 +6587,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID dc7486ac-0f26-4159-bab1-d3ef4ef6acc9</_id>
@@ -6958,10 +6603,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ef0910e1-576f-4bb6-98d7-54c185a6ef83</_id>
@@ -6978,10 +6619,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 6069dd68-19e4-475e-a24d-ecb0446b404b</_id>
@@ -6998,10 +6635,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 44606779-a46f-44b8-9849-dc5d45313018</_id>
@@ -7018,10 +6651,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 30adb013-62e0-4c72-a018-ca50c3e5fc78</_id>
@@ -7038,10 +6667,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ee5f8c30-e109-4e08-8e5c-a0ce96636f4a</_id>
@@ -7058,10 +6683,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ceeff233-10be-4d99-8344-06f984834b37</_id>
@@ -7078,10 +6699,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID b828cff5-00f3-455a-8170-f59bb362909b</_id>
@@ -7098,10 +6715,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID ee2373e4-1b71-45f7-87fe-7defa893b614</_id>
@@ -7118,10 +6731,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 62386c95-9573-4b1b-bd19-4d25ac5fe714</_id>
@@ -7138,10 +6747,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 2e92b182-66ba-4a48-8f20-ee82a67f0217</_id>
@@ -7158,16 +6763,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID afd79648-babb-40ef-a97b-5e38552117e7</_id>
 			<_name type="a">////    Attributes    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Attributes    ////
 </m_text>
@@ -7179,10 +6780,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID bb3d274b-a3e0-49aa-bb1a-b4240853b9e6</_id>
@@ -7200,10 +6797,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID c3e95d88-c96b-4da5-9275-53c78c385a0f</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 08cc011f-4944-49a6-9847-c67a914bcdc8</_id>
@@ -7221,10 +6814,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 9aafba3e-408c-45f7-b499-a052dc8d9940</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 9aaa3a59-b392-4af3-9301-e371a17ba22c</_id>
@@ -7242,10 +6831,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 7c0de2e4-2339-4c28-ac11-77d4ad72c296</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 736a1ca8-ba60-4bfa-8a30-f2f7f81ff261</_id>
@@ -7263,10 +6848,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 307f7bb1-6b1b-4975-a473-ce9b3e2763d6</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 1cd31fba-0e14-433e-803a-dfde5e0bf03b</_id>
@@ -7284,10 +6865,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 02e917c1-cfc0-4ccb-8a1b-9b0aca18b2d3</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID e04ee46a-58b9-487b-b338-e88fd8e2ab6f</_id>
@@ -7305,10 +6882,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 26d078b8-03b7-4ba0-99f5-47082ee24faa</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID b2ee0f77-4dd0-428a-ac77-6b2b9a3031ca</_id>
@@ -7326,10 +6899,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID 339cac41-ed1b-4908-9a9c-ae08ca05f425</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 99b3feff-61b6-479b-bec5-6e0ed7dc9869</_id>
@@ -7347,10 +6916,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID d3c78d3c-0bcd-4f81-9fae-d14b47f8fd3c</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 848292c8-a990-48ba-bc4f-e8ddfed59b64</_id>
@@ -7368,16 +6933,12 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hid type="a">GUID e9bf1e7e-70c4-4f15-9a26-ef059de3faec</_hid>
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IFileFragment type="e">
 			<_id type="a">GUID 91714725-290b-4539-bd48-3533dd56fad9</_id>
 			<_name type="a">////    Relations and components    ////</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">1.1.1970::1:0:0</_modifiedTime>
+			<_modifiedTime type="a">1.2.1990::0:0:0</_modifiedTime>
 			<m_type type="a">textFragment</m_type>
 			<m_text type="a">////    Relations and components    ////
 </m_text>
@@ -7389,10 +6950,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<INObjectHandle type="e">
 				</INObjectHandle>
 			</m_subject>
-			<Fragments type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</Fragments>
 		</IFileFragment>
 		<IClass type="e">
 			<_id type="a">GUID 47f4bf87-5976-4c72-843d-806cb4e30f9c</_id>
@@ -7410,16 +6967,16 @@ SendMqttMessage(topic, payload);</_bodyData>
 					
 				</IRPYRawContainer>
 			</Stereotypes>
-			<_modifiedTimeWeak type="a">5.29.2023::18:29:55</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:38</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID a08767e8-8b8a-4f4b-8c7e-a4814578ee3d</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.29.2023::18:29:55</_modifiedTime>
-			<_lastID type="a">8</_lastID>
-			<weakCGTime type="a">5.29.2023::18:29:55</weakCGTime>
+			<_modifiedTime type="a">6.3.2023::11:33:38</_modifiedTime>
+			<_lastID type="a">9</_lastID>
+			<weakCGTime type="a">6.3.2023::11:33:38</weakCGTime>
 			<strongCGTime type="a">5.29.2023::12:51:32</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7427,133 +6984,13 @@ SendMqttMessage(topic, payload);</_bodyData>
 			</_itsStateChart>
 			<_classModifier type="a">Unspecified</_classModifier>
 			<AggregatesList type="e">
-				<value>GUID 5cef1394-8497-4acf-ada6-15f0c01f4310</value>
 				<value>GUID 8083121c-da39-473a-a92b-390d8b1c51f2</value>
 				<value>GUID 159bccc3-1c6e-4ed0-8d75-e3d83956439b</value>
 				<value>GUID a2157eea-7188-4726-8d49-245f186812a8</value>
 				<value>GUID 79df2239-1d57-405c-9190-6346ca0259ae</value>
+				<value>GUID 6c3b2f66-f796-4f38-bf35-a73bc7901d10</value>
 			</AggregatesList>
 		</IClass>
-		<IPrimitiveOperation type="e">
-			<_id type="a">GUID 5cef1394-8497-4acf-ada6-15f0c01f4310</_id>
-			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Operation</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">Kind</_Name>
-													<_Value type="a">abstract</_Value>
-													<_Type type="a">Enum</_Type>
-													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<_name type="a">SetCurrentState</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:47:12</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:47:12</_modifiedTime>
-			<_lastID type="a">4</_lastID>
-			<_virtual type="a">0</_virtual>
-			<_returnType type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">void</_hname>
-					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
-				</IHandle>
-			</_returnType>
-			<_abstract type="a">0</_abstract>
-			<_final type="a">0</_final>
-			<_concurrency type="a">Sequential</_concurrency>
-			<_protection type="a">iPublic</_protection>
-			<_static type="a">0</_static>
-			<_constant type="a">0</_constant>
-			<AggregatesList type="e">
-				<value>GUID 93e63845-b9bf-4cfc-985d-894ffe39b3ba</value>
-				<value>GUID 2ff4fc8b-7315-4138-9ab3-a81c8db9aa10</value>
-			</AggregatesList>
-		</IPrimitiveOperation>
-		<IArgument type="e">
-			<_id type="a">GUID 93e63845-b9bf-4cfc-985d-894ffe39b3ba</_id>
-			<_myState type="a">8192</_myState>
-			<_properties type="p"><IPropertyContainer type="e">
-				<Subjects type="c">
-					<IRPYRawContainer type="e">
-						<IPropertySubject type="e">
-							<_Name type="a">CPP_CG</_Name>
-							<Metaclasses type="c">
-								<IRPYRawContainer type="e">
-									<IPropertyMetaclass type="e">
-										<_Name type="a">Type</_Name>
-										<Properties type="c">
-											<IRPYRawContainer type="e">
-												<IProperty type="e">
-													<_Name type="a">In</_Name>
-													<_Value type="a">$type</_Value>
-													<_Type type="a">String</_Type>
-												</IProperty>
-												
-											</IRPYRawContainer>
-										</Properties>
-									</IPropertyMetaclass>
-									
-								</IRPYRawContainer>
-							</Metaclasses>
-						</IPropertySubject>
-						
-					</IRPYRawContainer>
-				</Subjects>
-			</IPropertyContainer>
-			</_properties>
-			<_name type="a">stateObjectId</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:15:5</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:15:5</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">OMString</_hname>
-					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-		</IArgument>
-		<IArgument type="e">
-			<_id type="a">GUID 2ff4fc8b-7315-4138-9ab3-a81c8db9aa10</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">state</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:14:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:14:57</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">OMString</_hname>
-					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-		</IArgument>
 		<IPrimitiveOperation type="e">
 			<_id type="a">GUID 8083121c-da39-473a-a92b-390d8b1c51f2</_id>
 			<_myState type="a">8192</_myState>
@@ -7587,9 +7024,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:49:54</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:49:54</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:20</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:20</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">0</_virtual>
 			<_returnType type="r">
@@ -7696,9 +7133,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:19:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:19:37</_modifiedTime>
+			<_name type="a">SetStateDataRaw</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:23:55</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:23:55</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">0</_virtual>
 			<_returnType type="r">
@@ -7719,7 +7156,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 				<value>GUID bd1b6aa7-8189-4ae5-b353-61be3da01fab</value>
 				<value>GUID 78cd7139-a8e3-4f91-8b71-1abee8ce662a</value>
 				<value>GUID e391d712-e3d9-440d-a104-b6eed626a3f9</value>
-				<value>GUID 317b4132-6bdf-461b-861e-ecf35d9c21f8</value>
 			</AggregatesList>
 		</IPrimitiveOperation>
 		<IArgument type="e">
@@ -7773,32 +7209,6 @@ SendMqttMessage(topic, payload);</_bodyData>
 			<_isOrdered type="a">0</_isOrdered>
 			<_argumentDirection type="a">In</_argumentDirection>
 		</IArgument>
-		<IArgument type="e">
-			<_id type="a">GUID 317b4132-6bdf-461b-861e-ecf35d9c21f8</_id>
-			<_myState type="a">8192</_myState>
-			<_name type="a">useDataRaw</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:19:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:19:37</_modifiedTime>
-			<_typeOf type="r">
-				<IHandle type="e">
-					<_hm2Class type="a">IType</_hm2Class>
-					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
-					<_hname type="a">bool</_hname>
-					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
-				</IHandle>
-			</_typeOf>
-			<_isOrdered type="a">0</_isOrdered>
-			<_argumentDirection type="a">In</_argumentDirection>
-			<AggregatesList type="e">
-				<value>GUID ac81b01a-8f0f-4370-b739-dba33c5294e0</value>
-			</AggregatesList>
-		</IArgument>
-		<ILiteralSpecification type="e">
-			<_id type="a">GUID ac81b01a-8f0f-4370-b739-dba33c5294e0</_id>
-			<_modifiedTimeWeak type="a">5.29.2023::18:19:37</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:19:37</_modifiedTime>
-			<_value type="a">false</_value>
-		</ILiteralSpecification>
 		<IPrimitiveOperation type="e">
 			<_id type="a">GUID a2157eea-7188-4726-8d49-245f186812a8</_id>
 			<_myState type="a">8192</_myState>
@@ -7832,9 +7242,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:52:18</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:52:18</_modifiedTime>
+			<_name type="a">SetStateDataNumber</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:27</_modifiedTime>
 			<_lastID type="a">3</_lastID>
 			<_virtual type="a">0</_virtual>
 			<_returnType type="r">
@@ -7941,9 +7351,9 @@ SendMqttMessage(topic, payload);</_bodyData>
 				</Subjects>
 			</IPropertyContainer>
 			</_properties>
-			<_name type="a">SetStateData</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::18:16:28</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::18:16:28</_modifiedTime>
+			<_name type="a">SetStateDataBool</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:33:38</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:33:38</_modifiedTime>
 			<_lastID type="a">4</_lastID>
 			<_virtual type="a">0</_virtual>
 			<_returnType type="r">
@@ -8012,6 +7422,115 @@ SendMqttMessage(topic, payload);</_bodyData>
 					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
 					<_hname type="a">bool</_hname>
 					<_hid type="a">GUID e6c263cc-4bc5-4a11-b32d-02148c93add0</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IPrimitiveOperation type="e">
+			<_id type="a">GUID 6c3b2f66-f796-4f38-bf35-a73bc7901d10</_id>
+			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">CPP_CG</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Operation</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">Kind</_Name>
+													<_Value type="a">abstract</_Value>
+													<_Type type="a">Enum</_Type>
+													<_ExtraTypeInfo type="a">common,virtual,abstract</_ExtraTypeInfo>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
+			<_name type="a">SetStateDataString</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:31:44</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:31:44</_modifiedTime>
+			<_lastID type="a">3</_lastID>
+			<_virtual type="a">0</_virtual>
+			<_returnType type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">void</_hname>
+					<_hid type="a">GUID c6b70728-b655-45a0-abb7-8ea5d3da94be</_hid>
+				</IHandle>
+			</_returnType>
+			<_abstract type="a">0</_abstract>
+			<_final type="a">0</_final>
+			<_concurrency type="a">Sequential</_concurrency>
+			<_protection type="a">iPublic</_protection>
+			<_static type="a">0</_static>
+			<_constant type="a">0</_constant>
+			<AggregatesList type="e">
+				<value>GUID aad05ce7-e2b8-41ab-b05e-3de807b45c3f</value>
+				<value>GUID 2d2c7bb1-0e7d-4048-80e3-85649336b5d7</value>
+				<value>GUID 3836a2ed-273d-4b5a-8088-740ec2172017</value>
+			</AggregatesList>
+		</IPrimitiveOperation>
+		<IArgument type="e">
+			<_id type="a">GUID aad05ce7-e2b8-41ab-b05e-3de807b45c3f</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">stateObjectId</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:19:27</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:19:27</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IArgument type="e">
+			<_id type="a">GUID 2d2c7bb1-0e7d-4048-80e3-85649336b5d7</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">key</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:20:1</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:20:1</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
+				</IHandle>
+			</_typeOf>
+			<_isOrdered type="a">0</_isOrdered>
+			<_argumentDirection type="a">In</_argumentDirection>
+		</IArgument>
+		<IArgument type="e">
+			<_id type="a">GUID 3836a2ed-273d-4b5a-8088-740ec2172017</_id>
+			<_myState type="a">8192</_myState>
+			<_name type="a">data</_name>
+			<_modifiedTimeWeak type="a">6.3.2023::11:19:55</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.3.2023::11:19:55</_modifiedTime>
+			<_typeOf type="r">
+				<IHandle type="e">
+					<_hm2Class type="a">IType</_hm2Class>
+					<_hsubsystem type="a">PredefinedTypesCpp</_hsubsystem>
+					<_hname type="a">OMString</_hname>
+					<_hid type="a">GUID 1af3f2a5-fcc3-48cd-b086-29e9f0c30052</_hid>
 				</IHandle>
 			</_typeOf>
 			<_isOrdered type="a">0</_isOrdered>

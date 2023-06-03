@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Engine
-//!	Generated Date	: Mon, 29, May 2023  
+//!	Generated Date	: Sat, 3, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Engine.cpp
 *********************************************************************/
 
@@ -34,42 +34,42 @@ Engine::pCommsEngine_C::~pCommsEngine_C() {
     cleanUpRelations();
 }
 
-void Engine::pCommsEngine_C::SetCurrentState(OMString stateObjectId, const OMString& state) {
+void Engine::pCommsEngine_C::SetStateDataBool(const OMString& stateObjectId, const OMString& key, bool data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetCurrentState(stateObjectId,state);
+        itsIProteusComms->SetStateDataBool(stateObjectId,key,data);
     }
     
 }
 
-void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, int data) {
+void Engine::pCommsEngine_C::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, int data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataNumber(stateObjectId,key,data);
     }
     
 }
 
-void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw) {
+void Engine::pCommsEngine_C::SetStateDataNumber(const OMString& stateObjectId, const OMString& key, float data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data,useDataRaw);
+        itsIProteusComms->SetStateDataNumber(stateObjectId,key,data);
     }
     
 }
 
-void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, float data) {
+void Engine::pCommsEngine_C::SetStateDataRaw(const OMString& stateObjectId, const OMString& key, const OMString& data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataRaw(stateObjectId,key,data);
     }
     
 }
 
-void Engine::pCommsEngine_C::SetStateData(const OMString& stateObjectId, const OMString& key, bool data) {
+void Engine::pCommsEngine_C::SetStateDataString(const OMString& stateObjectId, const OMString& key, const OMString& data) {
     
     if (itsIProteusComms != NULL) {
-        itsIProteusComms->SetStateData(stateObjectId,key,data);
+        itsIProteusComms->SetStateDataString(stateObjectId,key,data);
     }
     
 }
@@ -94,7 +94,7 @@ void Engine::pCommsEngine_C::cleanUpRelations() {
 }
 //#]
 
-Engine::Engine(IOxfActive* theActiveContext) : ptStateObjectId("testid") {
+Engine::Engine(IOxfActive* theActiveContext) : ptStateObjectId("Engine") {
     NOTIFY_REACTIVE_CONSTRUCTOR(Engine, Engine(), 0, Default_Engine_Engine_SERIALIZE);
     setActiveContext(theActiveContext, false);
     itsCar = NULL;
@@ -191,11 +191,11 @@ void Engine::rootState_entDef() {
         rootState_subState = Idle;
         rootState_active = Idle;
         //#[ state Idle.(Entry) 
-        OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Idle");
-        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-float", 0.123f);
-        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-int", 123);
-        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-data-raw", "123", true);
-        OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-non-data-raw", "123", false);
+        OUT_PORT(pCommsEngine)->SetStateDataString(ptStateObjectId, "InState", "Idle");
+        OUT_PORT(pCommsEngine)->SetStateDataBool(ptStateObjectId, "test-bool", false);
+        OUT_PORT(pCommsEngine)->SetStateDataNumber(ptStateObjectId, "test-float", 0.123f);
+        OUT_PORT(pCommsEngine)->SetStateDataNumber(ptStateObjectId, "test-int", 123);
+        OUT_PORT(pCommsEngine)->SetStateDataRaw(ptStateObjectId, "test-string-data-raw", "123");
         //#]
         NOTIFY_TRANSITION_TERMINATED("2");
     }
@@ -215,7 +215,7 @@ IOxfReactive::TakeEventStatus Engine::rootState_processEvent() {
                     rootState_subState = Running;
                     rootState_active = Running;
                     //#[ state Running.(Entry) 
-                    OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Running");
+                    OUT_PORT(pCommsEngine)->SetStateDataString(ptStateObjectId, "InState", "Running");
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("0");
                     res = eventConsumed;
@@ -234,11 +234,11 @@ IOxfReactive::TakeEventStatus Engine::rootState_processEvent() {
                     rootState_subState = Idle;
                     rootState_active = Idle;
                     //#[ state Idle.(Entry) 
-                    OUT_PORT(pCommsEngine)->SetCurrentState(ptStateObjectId, "Idle");
-                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-float", 0.123f);
-                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-int", 123);
-                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-data-raw", "123", true);
-                    OUT_PORT(pCommsEngine)->SetStateData(ptStateObjectId, "test-string-non-data-raw", "123", false);
+                    OUT_PORT(pCommsEngine)->SetStateDataString(ptStateObjectId, "InState", "Idle");
+                    OUT_PORT(pCommsEngine)->SetStateDataBool(ptStateObjectId, "test-bool", false);
+                    OUT_PORT(pCommsEngine)->SetStateDataNumber(ptStateObjectId, "test-float", 0.123f);
+                    OUT_PORT(pCommsEngine)->SetStateDataNumber(ptStateObjectId, "test-int", 123);
+                    OUT_PORT(pCommsEngine)->SetStateDataRaw(ptStateObjectId, "test-string-data-raw", "123");
                     //#]
                     NOTIFY_TRANSITION_TERMINATED("1");
                     res = eventConsumed;

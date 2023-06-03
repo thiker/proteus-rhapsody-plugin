@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: Engine
-//!	Generated Date	: Mon, 29, May 2023  
+//!	Generated Date	: Sat, 3, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\Engine.h
 *********************************************************************/
 
@@ -54,19 +54,19 @@ public :
         ////    Operations    ////
         
         //## auto_generated
-        virtual void SetCurrentState(OMString stateObjectId, const OMString& state);
+        virtual void SetStateDataBool(const OMString& stateObjectId, const OMString& key, bool data);
         
         //## auto_generated
-        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, int data);
+        virtual void SetStateDataNumber(const OMString& stateObjectId, const OMString& key, int data);
         
         //## auto_generated
-        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, const OMString& data, bool useDataRaw = false);
+        virtual void SetStateDataNumber(const OMString& stateObjectId, const OMString& key, float data);
         
         //## auto_generated
-        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, float data);
+        virtual void SetStateDataRaw(const OMString& stateObjectId, const OMString& key, const OMString& data);
         
         //## auto_generated
-        virtual void SetStateData(const OMString& stateObjectId, const OMString& key, bool data);
+        virtual void SetStateDataString(const OMString& stateObjectId, const OMString& key, const OMString& data);
         
         //## auto_generated
         IProteusComms* getItsIProteusComms();
