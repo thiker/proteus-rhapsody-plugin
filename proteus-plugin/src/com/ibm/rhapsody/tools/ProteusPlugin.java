@@ -21,8 +21,9 @@ public class ProteusPlugin extends RPUserPlugin{
 
 	@Override
 	public void OnMenuItemSelect(String menuItem) {
-		 System.out.println(menuItem);
-		ProteusExtractor.getInstance().refresh();
+		if (menuItem.equals("RefreshProteus")) {
+			ProteusExtractor.getInstance().refresh();		
+		}
 	}
 
 	@Override

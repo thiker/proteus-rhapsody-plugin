@@ -41,7 +41,7 @@ import com.telelogic.rhapsody.core.RPGraphicalProperty;
 import com.telelogic.rhapsody.core.RhapsodyAppServer;
 
 public class ProteusExtractor {
-
+	ProteusRhapsodyAppListener appListener = null;
 	static IRPApplication irpApp = null;
 	static IRPProject irpPrj = null;
 	static MqttClient mqttClient = null;
@@ -61,35 +61,37 @@ public class ProteusExtractor {
 		}
 		return INSTANCE;
 	}
-	
-	public void setApp(IRPApplication app) {
-		irpApp = app;
-	}
 
 	public void refresh() {
-		//dispose();
+		dispose();
 		init();
 		extractAll();
+		
+		javax.swing.JOptionPane.showMessageDialog(null, "Successfully Refreshed Proteus.", "ProteusExtractor", javax.swing.JOptionPane.PLAIN_MESSAGE);
 	}
 
-	private static void init() {
+	private void init() {
 		if (irpApp == null) {
 			try {
 				irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
 			} catch (Exception e) {
 				e.printStackTrace();
-				System.out.println("ERROR: Can not find active IBM Rhapsody Application.");
+				javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Can not find active IBM Rhapsody Application", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
 				return;
 			}
 		}
-		System.out.println("test" );
+		appListener = new ProteusRhapsodyAppListener();
+		appListener.connect(irpApp);
+		
 		try {
 			irpPrj = irpApp.activeProject();
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.out.println("ERROR: Can not find active IBM Rhapsody project.");
+			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Can not find active IBM Rhapsody project.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
 			return;
 		}
+		
+		irpPrj.setNotifyPluginOnElementsChanged(1);
 
 		// Create temp directory
 		try {
@@ -101,13 +103,15 @@ public class ProteusExtractor {
 		}
 		if (initClient()) {
 			extractAll();
+		} else {
+			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Failed to connect MQTT.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
 		}
 	}
 
 	/**
 	 * Initialises the MQTT client and connection.
 	 */
-	private static boolean initClient() {
+	private boolean initClient() {
 		MemoryPersistence persistence = new MemoryPersistence();
 		MqttConnectOptions connOpts = new MqttConnectOptions();
 		connOpts.setCleanSession(true);
@@ -140,7 +144,7 @@ public class ProteusExtractor {
 		}
 	}
 
-	private static void sendMqttMessage(JSONObject data, String topic) {
+	private void sendMqttMessage(JSONObject data, String topic) {
 		// Create message
 		MqttMessage message = new MqttMessage();
 		message.setPayload(data.toString().getBytes());
@@ -158,18 +162,13 @@ public class ProteusExtractor {
 		}
 	}
 
-	private static void sendDiagramNodeUpdate(IRPUnit node) {
-		sendNodeDataUpdate(node);
-		sendNodeImageUpdate(node);
-	}
-
 	/***
 	 * Generates a message that contains the data of a node.
 	 * 
 	 * @param node
 	 * @return message with node data
 	 */
-	private static void sendNodeDataUpdate(IRPUnit node) {
+	private void sendNodeDataUpdate(IRPUnit node) {
 		IRPCollection modelElements = null;
 		Set<String> modelElementsGuids = new HashSet<>();
 		Set<String> nodeEdges = new HashSet<>();
@@ -226,7 +225,7 @@ public class ProteusExtractor {
 	 * @param node
 	 * @return message with node image data
 	 */
-	private static void sendNodeImageUpdate(IRPUnit node) {
+	private void sendNodeImageUpdate(IRPUnit node) {
 		System.out.println("Processing image update for node " + node.getDisplayName() + "..");
 		byte[] msgImageContent = new byte[0];
 
@@ -271,7 +270,7 @@ public class ProteusExtractor {
 		}
 	}
 
-	private static void sendClassModelElementUpdate(IRPClass element, Set<String> relatedDiagramGuids) {
+	private void sendClassModelElementUpdate(IRPClass element, Set<String> relatedDiagramGuids) {
 		if (element == null) {
 			return;
 		}
@@ -302,7 +301,7 @@ public class ProteusExtractor {
 	 * @param diagram the parent diagram
 	 * @return related diagrams
 	 */
-	private static Set<String> getRelatedDiagramsOfDiagram(IRPDiagram diagram) {
+	private Set<String> getRelatedDiagramsOfDiagram(IRPDiagram diagram) {
 		IRPCollection diagElements = diagram.getElementsInDiagram();
 
 		Set<String> linkedDiagrams = new HashSet<>();
@@ -333,12 +332,28 @@ public class ProteusExtractor {
 	/**
 	 * Start extracting the data for Proteus
 	 */
-	private static void extractAll() {
+	private void extractAll() {
 		IRPCollection packages = irpPrj.getPackages();
 
 		for (IRPPackage irpPackage : (List<IRPPackage>) packages.toList()) {
 			extractClasses(irpPackage);
 			extractObjectModelDiagrams(irpPackage);
+		}
+	}
+	
+	public void extractModelElement(IRPModelElement el) {
+		if (el == null) {
+			return;
+		}
+		String metaClass = el.getMetaClass();
+		switch(metaClass) {
+			case "Class": {
+				extractClass((IRPClass)el);
+				break;
+			}
+			case "ObjectModelDiagram": {
+				extractDiagram((IRPUnit)el);
+			}
 		}
 	}
 
@@ -347,35 +362,50 @@ public class ProteusExtractor {
 	 * 
 	 * @param irpPackage
 	 */
-	private static void extractObjectModelDiagrams(IRPPackage irpPackage) {
+	private void extractObjectModelDiagrams(IRPPackage irpPackage) {
 		IRPCollection omdCollection = irpPackage.getObjectModelDiagrams();
 
 		for (int i = 1; i <= omdCollection.getCount(); i++) {
 			IRPDiagram diagram = (IRPDiagram) omdCollection.getItem(i);
-			sendDiagramNodeUpdate(diagram);
+			extractDiagram(diagram);
 		}
 	}
 
 	/**
 	 * Extracts all classes model elements from the project.
 	 */
-	private static void extractClasses(IRPPackage irpPackage) {
+	private void extractClasses(IRPPackage irpPackage) {
 		IRPCollection irpClasses = irpPackage.getClasses();
 
 		for (IRPClass irpClass : (List<IRPClass>) irpClasses.toList()) {
-			IRPCollection stateCharts = irpClass.getBehavioralDiagrams();
-
-			Set<String> relatedDiagramsGuids = new HashSet<>();
-			for (IRPStatechart statechart : (List<IRPStatechart>) stateCharts.toList()) {
-				relatedDiagramsGuids.add(statechart.getGUID());
-				sendDiagramNodeUpdate((IRPUnit) statechart);
-			}
-
-			sendClassModelElementUpdate(irpClass, relatedDiagramsGuids);
+			extractClass(irpClass);
 		}
 	}
 
+	/*
+	 * Extracts a class and sends the update
+	 * */
+	public void extractClass(IRPClass irpClass) {
+		IRPCollection stateCharts = irpClass.getBehavioralDiagrams();
+
+		Set<String> relatedDiagramsGuids = new HashSet<>();
+		for (IRPStatechart statechart : (List<IRPStatechart>) stateCharts.toList()) {
+			relatedDiagramsGuids.add(statechart.getGUID());
+			extractDiagram((IRPUnit) statechart);
+		}
+
+		sendClassModelElementUpdate(irpClass, relatedDiagramsGuids);		
+	}
+
+	private void extractDiagram(IRPUnit node) {
+		sendNodeDataUpdate(node);
+		sendNodeImageUpdate(node);
+	}
+	
 	public void dispose() {
+		if (appListener != null) {
+			appListener.disconnect();
+		}
 		if (mqttClient != null) {
 			try {
 				mqttClient.close();
@@ -398,11 +428,8 @@ public class ProteusExtractor {
 		}
 	}
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public void main(String[] args) throws IOException, InterruptedException {
 		// Setup IBMRhapsody API
-		irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
-		irpApp.activeProject();
-
 		ProteusExtractor.getInstance().refresh();
 	}
 
