@@ -1,0 +1,16 @@
+[Helpers]
+numberOfElements=2
+
+name1=ProteusPlugin
+JavaMainClass1=com.ibm.rhapsody.tools.ProteusPlugin
+JavaClassPath1=\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\libs\org.eclipse.paho.client.mqttv3\1.2.0\org.eclipse.paho.client.mqttv3-1.2.0.jar;\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\libs\json-lib\json-20230227.jar;\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\bin;\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\libs\org.eclipse.paho.client.mqttv3\1.2.0\org.eclipse.paho.client.mqttv3-1.2.0-sources.jar;\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\libs\json-lib\json-20230227-sources.jar
+JavaLibPath=\\Mac\Coding\GithubProjects\proteus-rhapsody-plugin\proteus-plugin\src
+isPlugin1=1
+isVisible1=1
+DLLServerCompatible=1
+
+name2=RefreshProteus
+isPluginCommand2=1
+command2=ProteusPlugin
+applicableTo2=
+isVisible2=1

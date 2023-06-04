@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Rhapsody"/>
+	<classpathentry kind="lib" path="//Mac/Coding/GithubProjects/proteus-rhapsody-plugin/proteus-plugin/libs/org.eclipse.paho.client.mqttv3/1.2.0/org.eclipse.paho.client.mqttv3-1.2.0.jar"/>
+	<classpathentry kind="lib" path="//Mac/Coding/GithubProjects/proteus-rhapsody-plugin/proteus-plugin/libs/json-lib/json-20230227.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
