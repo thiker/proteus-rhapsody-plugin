@@ -1,10 +1,10 @@
 /********************************************************************
 	Rhapsody	: 9.0 
-	Login		: TK
+	Login		: thijskoenraadt
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ProteusComms
-//!	Generated Date	: Sat, 3, Jun 2023  
+//!	Generated Date	: Tue, 6, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\ProteusComms.cpp
 *********************************************************************/
 
@@ -120,7 +120,7 @@ void ProteusComms::pComms_C::cleanUpRelations() {
 }
 //#]
 
-char* ProteusComms::ADDRESS("tcp://localhost:1883");
+char* ProteusComms::ADDRESS("tcp://192.168.121.28:1883");
 
 char* ProteusComms::CLIENTID("ProteusDemoClient");
 

@@ -15,6 +15,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.function.Consumer;
 
+import org.eclipse.paho.client.mqttv3.IMqttMessageListener;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -46,7 +47,7 @@ public class ProteusExtractor {
 	static IRPProject irpPrj = null;
 	static MqttClient mqttClient = null;
 	static int mqttQos = 1;
-	static String mqttBroker = "tcp://10.211.55.2:1883";
+	static String mqttBroker = "tcp://127.0.0.1:1883";
 	static String mqttClientId = "IBMRhapsody";
 	static Path tempDirPath = null;
 
@@ -64,22 +65,25 @@ public class ProteusExtractor {
 
 	public void refresh() {
 		dispose();
-		init();
-		extractAll();
-		
-		javax.swing.JOptionPane.showMessageDialog(null, "Successfully Refreshed Proteus.", "ProteusExtractor", javax.swing.JOptionPane.PLAIN_MESSAGE);
+		if (init()) {
+			extractAll();
+			javax.swing.JOptionPane.showMessageDialog(null, "Refreshed Proteus.", "ProteusExtractor", javax.swing.JOptionPane.PLAIN_MESSAGE);
+		} else {
+			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Something went wrong when trying to refresh Proteus.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
-	private void init() {
+	private boolean init() {
 		if (irpApp == null) {
 			try {
 				irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
 			} catch (Exception e) {
 				e.printStackTrace();
 				javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Can not find active IBM Rhapsody Application", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
-				return;
+				return false;
 			}
 		}
+		
 		appListener = new ProteusRhapsodyAppListener();
 		appListener.connect(irpApp);
 		
@@ -88,9 +92,21 @@ public class ProteusExtractor {
 		} catch (Exception e) {
 			e.printStackTrace();
 			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Can not find active IBM Rhapsody project.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
-			return;
+			return false;
 		}
 		
+		// Get mqtt connection details. 
+		IRPClass connClass = irpPrj.findClass(("ProteusComms"));
+		try {
+			mqttBroker = connClass.findAttribute("ADDRESS").getDefaultValue().replaceAll("\"", "");
+			System.out.println("Mqtt broker set to:" + mqttBroker);
+		} catch(Exception e) {}
+		try {
+			mqttQos = Integer.parseInt(connClass.findAttribute("QOS").getDefaultValue());
+			System.out.println("Mqtt QOS set to:" + mqttQos);
+		} catch(Exception e) {}
+		
+		// Listen to element changes
 		irpPrj.setNotifyPluginOnElementsChanged(1);
 
 		// Create temp directory
@@ -99,13 +115,16 @@ public class ProteusExtractor {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			return;
+			return false;
 		}
+		
 		if (initClient()) {
 			extractAll();
 		} else {
 			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Failed to connect MQTT.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
+			return false;
 		}
+		return true;
 	}
 
 	/**
@@ -122,6 +141,7 @@ public class ProteusExtractor {
 		} catch (MqttException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			javax.swing.JOptionPane.showMessageDialog(null, "ERROR: Failed to create MQTT client.", "ProteusExtractor", javax.swing.JOptionPane.ERROR_MESSAGE);
 			return false;
 		}
 
@@ -130,7 +150,6 @@ public class ProteusExtractor {
 		try {
 			mqttClient.connect(connOpts);
 			System.out.println("Connected");
-			return true;
 		} catch (MqttSecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -142,6 +161,16 @@ public class ProteusExtractor {
 			System.out.println("MQTT Connection Init failed.");
 			return false;
 		}
+		
+		// Subscribe to actions topic
+		try {
+			mqttClient.subscribe("proteus/actions/extern/selection", new PTMqttMessageListener());
+		} catch (MqttException e) {
+			System.out.println("MQTT Subscription failed.");
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 	private void sendMqttMessage(JSONObject data, String topic) {
@@ -428,7 +457,7 @@ public class ProteusExtractor {
 		}
 	}
 
-	public void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 		// Setup IBMRhapsody API
 		ProteusExtractor.getInstance().refresh();
 	}
