@@ -1,5 +1,5 @@
 [Helpers]
-numberOfElements=2
+numberOfElements=3
 
 name1=ProteusPlugin
 JavaMainClass1=com.ibm.rhapsody.tools.ProteusPlugin
@@ -14,3 +14,9 @@ isPluginCommand2=1
 command2=ProteusPlugin
 applicableTo2=
 isVisible2=1
+
+name3=OpenInProteus
+isPluginCommand3=1
+command3=ProteusPlugin
+applicableTo3=ObjectModelDiagram
+isVisible3=1

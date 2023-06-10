@@ -12,10 +12,10 @@
 			<_id type="a">GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::15:47:59</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.4.2023::15:4:31</_modifiedTime>
 			<_lastID type="a">20</_lastID>
-			<weakCGTime type="a">6.10.2023::15:47:59</weakCGTime>
+			<weakCGTime type="a">6.10.2023::19:21:31</weakCGTime>
 			<strongCGTime type="a">5.29.2023::17:45:57</strongCGTime>
 			<_defaultComposite type="s">GUID b90912bb-dfeb-40e3-a57e-dbfecf0db832</_defaultComposite>
 			<_eventsBaseID type="a">18601</_eventsBaseID>
@@ -7580,7 +7580,7 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			<_id type="a">GUID f1aca1fd-f5bc-4457-beca-3c6e804dc37d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Starter</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::15:48:10</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -7589,7 +7589,7 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			</_theMainDiagram>
 			<_modifiedTime type="a">5.29.2023::17:45:39</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">6.10.2023::15:48:10</weakCGTime>
+			<weakCGTime type="a">6.10.2023::19:21:31</weakCGTime>
 			<strongCGTime type="a">5.28.2023::11:2:40</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7699,10 +7699,10 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			<_id type="a">GUID bdf6725f-40c7-4a05-99a6-cd70929a6ff7</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">StarterStateChart</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::15:48:10</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.10.2023::15:48:10</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.10.2023::15:48:10</weakCGTime>
+			<weakCGTime type="a">6.10.2023::19:21:31</weakCGTime>
 			<strongCGTime type="a">6.10.2023::15:48:10</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7989,9 +7989,9 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">statechartdiagram_0</_name>
-			<_modifiedTimeWeak type="a">6.3.2023::11:14:48</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
 			<_modifiedTime type="a">5.29.2023::12:5:56</_modifiedTime>
-			<_lastModifiedTime type="a">6.3.2023::11:32:45</_lastModifiedTime>
+			<_lastModifiedTime type="a">6.10.2023::19:21:31</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -8142,6 +8142,28 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 							</Metaclasses>
 						</IPropertySubject>
 						
+						<IPropertySubject type="e">
+							<_Name type="a">StatechartDiagram</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">State</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">ShowReactions</_Name>
+													<_Value type="a">True</_Value>
+													<_Type type="a">Bool</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
 					</IRPYRawContainer>
 				</Subjects>
 			</IPropertyContainer>
@@ -8193,6 +8215,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<m_polygon type="a">4 0 0  0 1060  1096 1060  1096 0  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
+			<frameset type="a">&lt;frameset rows=100%25&gt;
+&lt;frame name=ReactionsListCompartment&gt;</frameset>
 			<nAndLineCount type="a">0</nAndLineCount>
 			<m_pInheritsFrom type="r">
 				<IHandle type="e">
@@ -8201,7 +8225,19 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<m_nInheritanceMask type="a">0</m_nInheritanceMask>
 			<m_pDefaultComponentRelation type="s"></m_pDefaultComponentRelation>
 			<m_moveAndLineTimeStamp type="a">1.2.1990::0:0:0</m_moveAndLineTimeStamp>
+			<AggregatesList type="e">
+				<value>GUID f628c106-e104-4699-b430-316ebd9bd765</value>
+			</AggregatesList>
 		</CGIState>
+		<CGICompartment type="e">
+			<_id type="a">GUID f628c106-e104-4699-b430-316ebd9bd765</_id>
+			<m_name type="a">Reactions</m_name>
+			<m_displayOption type="a">All</m_displayOption>
+			<m_bShowInherited type="a">0</m_bShowInherited>
+			<m_bOrdered type="a">0</m_bOrdered>
+			<_itemValueOfFontPropertiesMapCount type="a">1</_itemValueOfFontPropertiesMapCount>
+			<_fontPropValues type="a">Tahoma 8 400 0 0 0 0</_fontPropValues>
+		</CGICompartment>
 		<CGIState type="e">
 			<_id type="a">GUID 70ca68d1-32e3-4ad9-8b99-9210538cbfba</_id>
 			<m_type type="a">8</m_type>

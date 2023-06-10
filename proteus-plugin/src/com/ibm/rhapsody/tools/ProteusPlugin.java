@@ -11,6 +11,7 @@ public class ProteusPlugin extends RPUserPlugin{
 
 	@Override
 	public void RhpPluginInit(IRPApplication rpyApplication) {
+		// enable extraction to happen automatically on load.
 		ProteusExtractor.getInstance().refresh();
 	}
 
@@ -23,6 +24,10 @@ public class ProteusPlugin extends RPUserPlugin{
 	public void OnMenuItemSelect(String menuItem) {
 		if (menuItem.equals("RefreshProteus")) {
 			ProteusExtractor.getInstance().refresh();		
+		}
+		
+		if (menuItem.equals("OpenInProteus")) {
+			ProteusExtractor.getInstance().OpenDiagramOfSelectedElement();
 		}
 	}
 

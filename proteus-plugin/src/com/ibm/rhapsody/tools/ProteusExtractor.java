@@ -62,6 +62,13 @@ public class ProteusExtractor {
 		}
 		return INSTANCE;
 	}
+	
+	public void OpenDiagramOfSelectedElement() {
+		JSONObject data = new JSONObject();
+		String[] rootNodeIds = new String[] {irpApp.getDiagramOfSelectedElement().getGUID()};
+		data.put("RootNodeIds", rootNodeIds);
+		sendMqttMessage(data, "proteus/data/create/viewers/");
+	}
 
 	public void refresh() {
 		dispose();
