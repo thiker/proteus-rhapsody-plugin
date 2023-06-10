@@ -12,10 +12,10 @@
 			<_id type="a">GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::15:13:24</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::15:47:59</_modifiedTimeWeak>
 			<_modifiedTime type="a">6.4.2023::15:4:31</_modifiedTime>
 			<_lastID type="a">20</_lastID>
-			<weakCGTime type="a">6.4.2023::15:13:24</weakCGTime>
+			<weakCGTime type="a">6.10.2023::15:47:59</weakCGTime>
 			<strongCGTime type="a">5.29.2023::17:45:57</strongCGTime>
 			<_defaultComposite type="s">GUID b90912bb-dfeb-40e3-a57e-dbfecf0db832</_defaultComposite>
 			<_eventsBaseID type="a">18601</_eventsBaseID>
@@ -6610,7 +6610,7 @@
 			<_id type="a">GUID 82fbbb31-c91a-4874-8183-865086c7b200</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Engine</_name>
-			<_modifiedTimeWeak type="a">6.3.2023::12:13:52</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::15:47:59</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -6619,7 +6619,7 @@
 			</_theMainDiagram>
 			<_modifiedTime type="a">6.3.2023::12:13:52</_modifiedTime>
 			<_lastID type="a">7</_lastID>
-			<weakCGTime type="a">6.3.2023::12:13:52</weakCGTime>
+			<weakCGTime type="a">6.10.2023::15:47:59</weakCGTime>
 			<strongCGTime type="a">5.29.2023::12:11:28</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -6725,13 +6725,13 @@
 		</ILiteralSpecification>
 		<IStateChart type="e">
 			<_id type="a">GUID 09841855-655b-4c8c-a5b1-c656e94a10ef</_id>
-			<_myState type="a">10240</_myState>
-			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">6.3.2023::11:57:58</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.3.2023::11:57:58</_modifiedTime>
+			<_myState type="a">8192</_myState>
+			<_name type="a">EngineStateChart</_name>
+			<_modifiedTimeWeak type="a">6.10.2023::15:47:59</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.10.2023::15:47:59</_modifiedTime>
 			<_lastID type="a">7</_lastID>
-			<weakCGTime type="a">6.3.2023::11:57:58</weakCGTime>
-			<strongCGTime type="a">5.29.2023::12:11:28</strongCGTime>
+			<weakCGTime type="a">6.10.2023::15:47:59</weakCGTime>
+			<strongCGTime type="a">6.10.2023::15:47:59</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -7580,7 +7580,7 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			<_id type="a">GUID f1aca1fd-f5bc-4457-beca-3c6e804dc37d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Starter</_name>
-			<_modifiedTimeWeak type="a">6.3.2023::11:32:45</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.10.2023::15:48:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
@@ -7589,7 +7589,7 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			</_theMainDiagram>
 			<_modifiedTime type="a">5.29.2023::17:45:39</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">6.3.2023::11:32:45</weakCGTime>
+			<weakCGTime type="a">6.10.2023::15:48:10</weakCGTime>
 			<strongCGTime type="a">5.28.2023::11:2:40</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7697,13 +7697,13 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 		</ILiteralSpecification>
 		<IStateChart type="e">
 			<_id type="a">GUID bdf6725f-40c7-4a05-99a6-cd70929a6ff7</_id>
-			<_myState type="a">10240</_myState>
-			<_name type="a">statechart_0</_name>
-			<_modifiedTimeWeak type="a">6.3.2023::11:32:45</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.3.2023::11:32:45</_modifiedTime>
+			<_myState type="a">8192</_myState>
+			<_name type="a">StarterStateChart</_name>
+			<_modifiedTimeWeak type="a">6.10.2023::15:48:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.10.2023::15:48:10</_modifiedTime>
 			<_lastID type="a">4</_lastID>
-			<weakCGTime type="a">6.3.2023::11:32:45</weakCGTime>
-			<strongCGTime type="a">5.28.2023::11:2:40</strongCGTime>
+			<weakCGTime type="a">6.10.2023::15:48:10</weakCGTime>
+			<strongCGTime type="a">6.10.2023::15:48:10</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
 				</IHandle>
