@@ -12,10 +12,10 @@
 			<_id type="a">GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Default</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
-			<_modifiedTime type="a">6.4.2023::15:4:31</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::11:48:34</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::11:48:34</_modifiedTime>
 			<_lastID type="a">20</_lastID>
-			<weakCGTime type="a">6.10.2023::19:21:31</weakCGTime>
+			<weakCGTime type="a">6.11.2023::11:48:34</weakCGTime>
 			<strongCGTime type="a">5.29.2023::17:45:57</strongCGTime>
 			<_defaultComposite type="s">GUID b90912bb-dfeb-40e3-a57e-dbfecf0db832</_defaultComposite>
 			<_eventsBaseID type="a">18601</_eventsBaseID>
@@ -5125,8 +5125,8 @@
 			</_properties>
 			<_name type="a">StarterOMD</_name>
 			<_modifiedTimeWeak type="a">1.2.1990::0:0:0</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:45:39</_modifiedTime>
-			<_lastModifiedTime type="a">5.29.2023::17:45:39</_lastModifiedTime>
+			<_modifiedTime type="a">6.11.2023::11:49:11</_modifiedTime>
+			<_lastModifiedTime type="a">6.11.2023::11:49:11</_lastModifiedTime>
 			<m_hReferencedDiagram type="r">
 				<IHandle type="e">
 				</IHandle>
@@ -5276,7 +5276,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">2056</m_drawBehavior>
-			<m_transform type="a">0.0793201 0 0 0.101604 229.841 107.572 </m_transform>
+			<m_transform type="a">0.0793201 0 0 0.101604 233.841 71.572 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -5450,7 +5450,7 @@
 				</CGIText>
 			</m_name>
 			<m_drawBehavior type="a">2056</m_drawBehavior>
-			<m_transform type="a">0.126534 0 0 0.101604 348.747 296.572 </m_transform>
+			<m_transform type="a">0.126534 0 0 0.101604 386.747 296.572 </m_transform>
 			<m_bIsPreferencesInitialized type="a">1</m_bIsPreferencesInitialized>
 			<m_AdditionalLabel type="p">
 				<CGIText type="e">
@@ -5468,10 +5468,11 @@
 					<m_nOrientationCtrlPt type="a">1</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_AdditionalLabel>
+			<m_bFramesetModified type="a">1</m_bFramesetModified>
 			<m_polygon type="a">4 2 329  2 1451  1061 1451  1061 329  </m_polygon>
 			<m_nNameFormat type="a">0</m_nNameFormat>
 			<m_nIsNameFormat type="a">0</m_nIsNameFormat>
-			<frameset type="a">&lt;frameset rows=50%25,50%25&gt;
+			<frameset type="a">&lt;frameset rows=47%25,53%25&gt;
 &lt;frame name=AttributeListCompartment&gt;
 &lt;frame name=OperationListCompartment&gt;</frameset>
 			<Attrs type="c">
@@ -5558,7 +5559,7 @@
 					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
-			<m_arrow type="a">1 404 214  </m_arrow>
+			<m_arrow type="a">1 442 178  </m_arrow>
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">2</m_line_style>
@@ -5740,7 +5741,7 @@
 					<m_nOrientationCtrlPt type="a">7</m_nOrientationCtrlPt>
 				</CGIText>
 			</m_rpn>
-			<m_arrow type="a">1 122 214  </m_arrow>
+			<m_arrow type="a">1 122 178  </m_arrow>
 			<m_anglePoint1 type="a">0 0 </m_anglePoint1>
 			<m_anglePoint2 type="a">0 0 </m_anglePoint2>
 			<m_line_style type="a">2</m_line_style>
@@ -6234,10 +6235,10 @@
 			<_id type="a">GUID b90912bb-dfeb-40e3-a57e-dbfecf0db832</_id>
 			<_myState type="a">40960</_myState>
 			<_name type="a">TopLevel</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::17:45:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::17:45:57</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">5.29.2023::17:45:57</weakCGTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">5.27.2023::19:14:23</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -6261,8 +6262,8 @@
 			<_id type="a">GUID 8e335351-a9b6-4ee8-8879-ae833e5ecf7d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsStarter</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::13:23:49</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::13:23:49</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -6279,8 +6280,8 @@
 			<_id type="a">GUID 931e17ac-893c-4e06-ba7e-455d572af612</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsEngine</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::13:23:43</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::13:23:43</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -6297,8 +6298,8 @@
 			<_id type="a">GUID 9fd091f5-41d3-40f5-b6d3-64379e7573d4</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsCar</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::13:23:40</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::13:23:40</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -6315,8 +6316,8 @@
 			<_id type="a">GUID b3d9500a-d584-46a7-a77f-f4857b993b73</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsWheel</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::13:23:51</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::13:23:51</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -6333,8 +6334,8 @@
 			<_id type="a">GUID 5bc31e76-0465-4866-ba6f-06316b86fe57</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">itsProteusComms</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::13:23:46</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::13:23:46</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -6541,16 +6542,16 @@
 			<_id type="a">GUID 686ab6aa-a66e-4dc2-8c86-7fbc11b2a2af</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Car</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::15:13:49</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 2c1bb3a0-688c-4ed3-a317-9ee1dc8e2879</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.4.2023::15:13:49</_modifiedTime>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_lastID type="a">1</_lastID>
-			<weakCGTime type="a">6.4.2023::15:13:49</weakCGTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">5.27.2023::18:27:48</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -6610,16 +6611,16 @@
 			<_id type="a">GUID 82fbbb31-c91a-4874-8183-865086c7b200</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Engine</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::15:47:59</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID 0e97bf50-b195-452e-aad4-7bf3e337f190</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.3.2023::12:13:52</_modifiedTime>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_lastID type="a">7</_lastID>
-			<weakCGTime type="a">6.10.2023::15:47:59</weakCGTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">5.29.2023::12:11:28</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7535,15 +7536,15 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			<_id type="a">GUID 41d094b5-0884-46bb-adff-1c176f2b4356</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Wheel</_name>
-			<_modifiedTimeWeak type="a">6.4.2023::15:13:49</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID a801b698-0d19-4dc6-a11d-d008ddff7504</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">6.4.2023::15:13:49</_modifiedTime>
-			<weakCGTime type="a">6.4.2023::15:13:49</weakCGTime>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">6.4.2023::15:13:49</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -7580,16 +7581,16 @@ OUT_PORT(pCommsEngine)-&gt;SetStateDataRaw(ptStateObjectId, &quot;test-string-da
 			<_id type="a">GUID f1aca1fd-f5bc-4457-beca-3c6e804dc37d</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">Starter</_name>
-			<_modifiedTimeWeak type="a">6.10.2023::19:21:31</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::11:49:11</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID f56d17c3-ff30-463b-9f02-02e49ce4954c</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.29.2023::17:45:39</_modifiedTime>
+			<_modifiedTime type="a">6.11.2023::11:49:11</_modifiedTime>
 			<_lastID type="a">3</_lastID>
-			<weakCGTime type="a">6.10.2023::19:21:31</weakCGTime>
+			<weakCGTime type="a">6.11.2023::11:49:11</weakCGTime>
 			<strongCGTime type="a">5.28.2023::11:2:40</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -8526,8 +8527,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID 9ccf7c8c-46b8-47e7-8d54-571ef2ed8d18</_id>
 			<_myState type="a">10240</_myState>
 			<_name type="a">itsStarterComponent</_name>
-			<_modifiedTimeWeak type="a">5.28.2023::11:2:55</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.28.2023::11:2:55</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::11:49:11</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::11:49:11</_modifiedTime>
 			<_multiplicity type="a">1</_multiplicity>
 			<_otherClass type="r">
 				<IClassifierHandle type="e">
@@ -8548,15 +8549,15 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID 8687d7b6-4aa8-4b42-a2d3-6f688675beec</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">StarterComponent</_name>
-			<_modifiedTimeWeak type="a">5.28.2023::11:2:55</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID f56d17c3-ff30-463b-9f02-02e49ce4954c</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.28.2023::11:2:55</_modifiedTime>
-			<weakCGTime type="a">5.28.2023::11:2:55</weakCGTime>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">5.28.2023::11:2:8</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -8593,15 +8594,15 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID e4053cf3-b664-4428-91b4-85172e30457e</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">StarterComponent2</_name>
-			<_modifiedTimeWeak type="a">5.28.2023::11:2:52</_modifiedTimeWeak>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
 			<_theMainDiagram type="r">
 				<IHandle type="e">
 					<_hm2Class type="a">IDiagram</_hm2Class>
 					<_hid type="a">GUID f56d17c3-ff30-463b-9f02-02e49ce4954c</_hid>
 				</IHandle>
 			</_theMainDiagram>
-			<_modifiedTime type="a">5.28.2023::11:2:52</_modifiedTime>
-			<weakCGTime type="a">5.28.2023::11:2:52</weakCGTime>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
+			<weakCGTime type="a">6.11.2023::10:44:10</weakCGTime>
 			<strongCGTime type="a">5.28.2023::11:2:29</strongCGTime>
 			<_itsStateChart type="r">
 				<IHandle type="e">
@@ -8638,8 +8639,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID 1a946a08-0369-41ea-899c-b6c8e1827a04</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evRun</_name>
-			<_modifiedTimeWeak type="a">5.27.2023::18:31:18</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.27.2023::18:31:18</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -8650,8 +8651,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID 7574f339-aaba-4227-b566-064f89dc29d4</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evIdle</_name>
-			<_modifiedTimeWeak type="a">5.27.2023::18:30:23</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.27.2023::18:30:23</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -8662,8 +8663,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID 5a389eab-946b-4960-8e58-7ee3fb2efe73</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evStart</_name>
-			<_modifiedTimeWeak type="a">5.27.2023::18:30:30</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.27.2023::18:30:30</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
@@ -8674,8 +8675,8 @@ OUT_PORT(pCommsStarter)-&gt;SetStateDataString(ptStateObjectId, &quot;InState&qu
 			<_id type="a">GUID a18dea96-1b31-4f98-8725-ea7d39e392d3</_id>
 			<_myState type="a">8192</_myState>
 			<_name type="a">evStop</_name>
-			<_modifiedTimeWeak type="a">5.27.2023::18:30:34</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.27.2023::18:30:34</_modifiedTime>
+			<_modifiedTimeWeak type="a">6.11.2023::10:44:10</_modifiedTimeWeak>
+			<_modifiedTime type="a">6.11.2023::10:44:10</_modifiedTime>
 			<_virtual type="a">0</_virtual>
 			<Args type="c">
 				<IRPYRawContainer type="e">
