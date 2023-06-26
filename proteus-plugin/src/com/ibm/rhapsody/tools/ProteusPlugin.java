@@ -12,7 +12,7 @@ public class ProteusPlugin extends RPUserPlugin{
 	@Override
 	public void RhpPluginInit(IRPApplication rpyApplication) {
 		// enable extraction to happen automatically on load.
-		ProteusExtractor.getInstance().refresh();
+		//ProteusExtractor.getInstance().refresh();
 	}
 
 	@Override

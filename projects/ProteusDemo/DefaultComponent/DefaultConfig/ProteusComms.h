@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ProteusComms
-//!	Generated Date	: Tue, 6, Jun 2023  
+//!	Generated Date	: Mon, 12, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\ProteusComms.h
 *********************************************************************/
 

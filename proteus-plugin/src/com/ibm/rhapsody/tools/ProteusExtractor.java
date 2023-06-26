@@ -69,7 +69,7 @@ public class ProteusExtractor {
 		data.put("RootNodeIds", rootNodeIds);
 		sendMqttMessage(data, "proteus/data/create/viewers/");
 	}
-
+	
 	public void refresh() {
 		dispose();
 		if (init()) {

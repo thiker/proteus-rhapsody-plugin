@@ -4,7 +4,7 @@
 	Component	: DefaultComponent 
 	Configuration 	: DefaultConfig
 	Model Element	: ProteusComms
-//!	Generated Date	: Sun, 11, Jun 2023  
+//!	Generated Date	: Sat, 24, Jun 2023  
 	File Path	: DefaultComponent\DefaultConfig\ProteusComms.cpp
 *********************************************************************/
 
@@ -120,7 +120,7 @@ void ProteusComms::pComms_C::cleanUpRelations() {
 }
 //#]
 
-char* ProteusComms::ADDRESS("tcp://192.168.178.88:1883");
+char* ProteusComms::ADDRESS("tcp://10.211.55.2:1883");
 
 char* ProteusComms::CLIENTID("ProteusDemoClient");
 
