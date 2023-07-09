@@ -42,9 +42,9 @@
 								<_hid type="a">GUID 2c1bb3a0-688c-4ed3-a317-9ee1dc8e2879</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">0 166 </_UpLeft>
-						<_DownRight type="a">587 552 </_DownRight>
-						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
+						<_UpLeft type="a">0 18 </_UpLeft>
+						<_DownRight type="a">705 370 </_DownRight>
+						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
 						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
@@ -269,7 +269,7 @@
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
-						<_DownRight type="a">185 591 </_DownRight>
+						<_DownRight type="a">185 592 </_DownRight>
 						<m_nDiagramIndex type="a">7</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
@@ -302,13 +302,13 @@
 						</_theDiagram>
 						<_UpLeft type="a">0 0 </_UpLeft>
 						<_DownRight type="a">1628 764 </_DownRight>
-						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
+						<m_nDiagramIndex type="a">1</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 				</IRPYRawContainer>
 			</myViewsWithID>
-			<_fullName type="a">Y:\github-projects\proteus-rhapsody-plugin\projects\ProteusDemo\ProteusDemo</_fullName>
+			<_fullName type="a">D:\Coding\GitRepos\projects\ProteusDemo\ProteusDemo</_fullName>
 			<_selectedPerspective type="a">Advanced</_selectedPerspective>
 			<m_SearchScopeList type="c">
 				<IRPYRawContainer type="e">
@@ -327,7 +327,19 @@
 			<favoritesItem type="e">
 				<generation type="a">0</generation>
 				<name type="a">Favorites</name>
-				<idOrFolder type="a">folder</idOrFolder>
+				<idOrFolder type="a">folder-expanded</idOrFolder>
+			</favoritesItem>
+			
+			<favoritesItem type="e">
+				<generation type="a">1</generation>
+				<name type="a">CarOMD</name>
+				<idOrFolder type="a">#startHnd# INObjectHandle 
+	- _m2Class = &quot;IDiagram&quot;#hndSem#
+	- _filename = &quot;D:\\Coding\\GitRepos\\projects\\ProteusDemo\\ProteusDemo_rpy\\Default.sbsx&quot;#hndSem#
+	- _subsystem = &quot;Default&quot;#hndSem#
+	- _name = &quot;CarOMD&quot;#hndSem#
+	- _id = GUID 2c1bb3a0-688c-4ed3-a317-9ee1dc8e2879#hndSem#
+#endHnd#</idOrFolder>
 			</favoritesItem>
 			
 		</CGEMdiWorkspace>
