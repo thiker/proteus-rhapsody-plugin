@@ -41,14 +41,29 @@ import com.telelogic.rhapsody.core.IRPUnit;
 import com.telelogic.rhapsody.core.RPGraphicalProperty;
 import com.telelogic.rhapsody.core.RhapsodyAppServer;
 
+/**
+ * Extractor class for Proteus which is used to extract, convert and communicate the existing 2D system models to 3DML formatted data.
+ * This data is then sent to the broker so it can be visualized by Proteus in Unity.
+ * @author thijskoenraadt
+ *
+ */
 public class ProteusExtractor {
 	ProteusRhapsodyAppListener appListener = null;
 	static IRPApplication irpApp = null;
 	static IRPProject irpPrj = null;
 	static MqttClient mqttClient = null;
 	static int mqttQos = 1;
+	
+	/**
+	 * Default broker IP. This IP will be overriden with the value set in the Proteus communication object in the Rhapsody project that the plugin is attached to.
+	 */
 	static String mqttBroker = "tcp://127.0.0.1:1883";
+	
+	/**
+	 * The ID that the proteus plugin will use for its MQTT client. 
+	 */
 	static String mqttClientId = "IBMRhapsody";
+	
 	static Path tempDirPath = null;
 
 	private static ProteusExtractor INSTANCE;
@@ -56,6 +71,10 @@ public class ProteusExtractor {
 	private ProteusExtractor() {
 	}
 
+	/**
+	 * Gets the singleton instance of the ProteusExtractor.
+	 * @return Singleton instance of the ProteusExtractor.
+	 */
 	public static ProteusExtractor getInstance() {
 		if (INSTANCE == null) {
 			INSTANCE = new ProteusExtractor();
@@ -63,6 +82,9 @@ public class ProteusExtractor {
 		return INSTANCE;
 	}
 	
+	/**
+	 * Gets the diagram of the element that is currently selected and opens this diagram in a viewer of Proteus in Unity.
+	 */
 	public void OpenDiagramOfSelectedElement() {
 		JSONObject data = new JSONObject();
 		String[] rootNodeIds = new String[] {irpApp.getDiagramOfSelectedElement().getGUID()};
@@ -70,8 +92,12 @@ public class ProteusExtractor {
 		sendMqttMessage(data, "proteus/data/create/viewers/");
 	}
 	
+	/**
+	 * Refreshes the ProteusPlugin, establishes the MQTT communication and extracts all models once so the all 3DML formatted data is sent once.
+	 */
 	public void refresh() {
 		dispose();
+		
 		if (init()) {
 			extractAll();
 			javax.swing.JOptionPane.showMessageDialog(null, "Refreshed Proteus.", "ProteusExtractor", javax.swing.JOptionPane.PLAIN_MESSAGE);
@@ -80,7 +106,12 @@ public class ProteusExtractor {
 		}
 	}
 
+	/**
+	 * Initialize the ProteusExtractor. Get a reference to the active IBM-Rhapsody application and establish an MQTT connection. Once this connection is established, the plugin will send once all extracted 3DML formatted data.
+	 * @return whether the ProteusExtractor was successfully initialized.
+	 */
 	private boolean init() {
+		// Get the rhapsody application
 		if (irpApp == null) {
 			try {
 				irpApp = RhapsodyAppServer.getActiveRhapsodyApplication();
@@ -91,9 +122,11 @@ public class ProteusExtractor {
 			}
 		}
 		
+		// Create a listener for the app and connect it.
 		appListener = new ProteusRhapsodyAppListener();
 		appListener.connect(irpApp);
 		
+		// Get the active project.
 		try {
 			irpPrj = irpApp.activeProject();
 		} catch (Exception e) {
@@ -136,6 +169,7 @@ public class ProteusExtractor {
 
 	/**
 	 * Initialises the MQTT client and connection.
+	 * @return whether the MQTT client was successfully initialized.
 	 */
 	private boolean initClient() {
 		MemoryPersistence persistence = new MemoryPersistence();
@@ -180,6 +214,11 @@ public class ProteusExtractor {
 		return true;
 	}
 
+	/**
+	 * Sends an MQTT message to the broker.
+	 * @param data the json data to send.
+	 * @param topic the topic to send the data to.
+	 */
 	private void sendMqttMessage(JSONObject data, String topic) {
 		// Create message
 		MqttMessage message = new MqttMessage();
@@ -199,10 +238,9 @@ public class ProteusExtractor {
 	}
 
 	/***
-	 * Generates a message that contains the data of a node.
+	 * Generates a message that contains the 3DML formatted data of a node and sends it.
 	 * 
-	 * @param node
-	 * @return message with node data
+	 * @param node the node to send the data for.
 	 */
 	private void sendNodeDataUpdate(IRPUnit node) {
 		IRPCollection modelElements = null;
@@ -229,7 +267,9 @@ public class ProteusExtractor {
 			}
 		}
 
+		// Create edges for each related diagram and send this edge update.
 		for (String diagramGuid : relatedDiagramsGuids) {
+			// Create edge update.
 			JSONObject edgeData = new JSONObject();
 			String edgeId = "PT_EDGE " + node.getGUID() + " " + diagramGuid;
 
@@ -256,10 +296,9 @@ public class ProteusExtractor {
 	}
 
 	/**
-	 * Generate a message that contains the image data of a node.
+	 * Generate a message that contains the image data of a node and sends it.
 	 * 
-	 * @param node
-	 * @return message with node image data
+	 * @param node the node for which the image should be sent.
 	 */
 	private void sendNodeImageUpdate(IRPUnit node) {
 		System.out.println("Processing image update for node " + node.getDisplayName() + "..");
@@ -306,6 +345,11 @@ public class ProteusExtractor {
 		}
 	}
 
+	/**
+	 * Sends a node update for a class model element.
+	 * @param element the class model element to send.
+	 * @param relatedDiagramGuids A set of GUIDs that the diagram is related to.
+	 */
 	private void sendClassModelElementUpdate(IRPClass element, Set<String> relatedDiagramGuids) {
 		if (element == null) {
 			return;
@@ -326,9 +370,7 @@ public class ProteusExtractor {
 	}
 
 	/******************************************************
-	 * 
 	 * Helpers
-	 *
 	 ******************************************************/
 
 	/**
@@ -366,7 +408,7 @@ public class ProteusExtractor {
 	 ******************************************************/
 
 	/**
-	 * Start extracting the data for Proteus
+	 * Starts extracting all the data for Proteus. Used internally by the extractor during a refresh or initialization.
 	 */
 	private void extractAll() {
 		IRPCollection packages = irpPrj.getPackages();
@@ -377,10 +419,19 @@ public class ProteusExtractor {
 		}
 	}
 	
+	/**
+	 * Extracts a model element and converts it to 3DML formatted data that is sent to the MQTT broker so it can be used by Proteus in Unity.
+	 * 
+	 * The most important function of the extractor. This function will be called whenever a model element changes.
+	 * This function can be extended / modified to add support for additional types of classes or objects to extract.
+	 * This can be accomplished by implementing these extraction functions and changing the switch statement.
+	 * @param el the model element to extract.
+	 */
 	public void extractModelElement(IRPModelElement el) {
 		if (el == null) {
 			return;
 		}
+		
 		String metaClass = el.getMetaClass();
 		switch(metaClass) {
 			case "Class": {
@@ -394,9 +445,10 @@ public class ProteusExtractor {
 	}
 
 	/**
-	 * Extract all object model diagrams from the project.
+	 * Extracts all object model diagrams for a given package..
+	 * Used internally by the extractor during a refresh or initialization.
 	 * 
-	 * @param irpPackage
+	 * @param irpPackage the package to get the model diagrams from.
 	 */
 	private void extractObjectModelDiagrams(IRPPackage irpPackage) {
 		IRPCollection omdCollection = irpPackage.getObjectModelDiagrams();
@@ -408,7 +460,10 @@ public class ProteusExtractor {
 	}
 
 	/**
-	 * Extracts all classes model elements from the project.
+	 * Extracts all classes model elements for a given package.
+	 * Used internally by the extractor during a refresh or initialization.
+	 * 
+	 * @param irpPackage the package to extract the data from.
 	 */
 	private void extractClasses(IRPPackage irpPackage) {
 		IRPCollection irpClasses = irpPackage.getClasses();
@@ -418,10 +473,11 @@ public class ProteusExtractor {
 		}
 	}
 
-	/*
-	 * Extracts a class and sends the update
+	/**
+	 * Extracts a class and sends the update.
+	 * @param irpClass
 	 * */
-	public void extractClass(IRPClass irpClass) {
+	private void extractClass(IRPClass irpClass) {
 		IRPCollection stateCharts = irpClass.getBehavioralDiagrams();
 
 		Set<String> relatedDiagramsGuids = new HashSet<>();
@@ -432,12 +488,19 @@ public class ProteusExtractor {
 
 		sendClassModelElementUpdate(irpClass, relatedDiagramsGuids);		
 	}
-
+	
+	/**
+	 * Extracts a diagram node and sends the update.
+	 * @param node the node to extract.
+	 */
 	private void extractDiagram(IRPUnit node) {
 		sendNodeDataUpdate(node);
 		sendNodeImageUpdate(node);
 	}
 	
+	/**
+	 * Disposes the extractor, clears the images that were generated and closes the MQTT communication.
+	 */
 	public void dispose() {
 		if (appListener != null) {
 			appListener.disconnect();
