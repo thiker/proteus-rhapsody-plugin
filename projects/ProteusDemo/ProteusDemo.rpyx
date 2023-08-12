@@ -11,10 +11,65 @@
 	<IProject type="e">
 			<_id type="a">GUID 9b03fc16-53b9-4d3f-8848-4ec7ec666d1a</_id>
 			<_myState type="a">8192</_myState>
+			<_properties type="p"><IPropertyContainer type="e">
+				<Subjects type="c">
+					<IRPYRawContainer type="e">
+						<IPropertySubject type="e">
+							<_Name type="a">General</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Model</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalHelpersFiles</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+												<IProperty type="e">
+													<_Name type="a">HelpersFile</_Name>
+													<_Value type="a">Y:\github-projects\proteus-rhapsody-plugin\proteus-plugin\ProteusPlugin.hep</_Value>
+													<_Type type="a">File</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+						<IPropertySubject type="e">
+							<_Name type="a">Model</_Name>
+							<Metaclasses type="c">
+								<IRPYRawContainer type="e">
+									<IPropertyMetaclass type="e">
+										<_Name type="a">Profile</_Name>
+										<Properties type="c">
+											<IRPYRawContainer type="e">
+												<IProperty type="e">
+													<_Name type="a">AdditionalHelpersFiles</_Name>
+													<_Type type="a">String</_Type>
+												</IProperty>
+												
+											</IRPYRawContainer>
+										</Properties>
+									</IPropertyMetaclass>
+									
+								</IRPYRawContainer>
+							</Metaclasses>
+						</IPropertySubject>
+						
+					</IRPYRawContainer>
+				</Subjects>
+			</IPropertyContainer>
+			</_properties>
 			<_name type="a">ProteusDemo</_name>
-			<_modifiedTimeWeak type="a">5.29.2023::12:7:44</_modifiedTimeWeak>
-			<_modifiedTime type="a">5.29.2023::12:7:44</_modifiedTime>
-			<_lastID type="a">4</_lastID>
+			<_modifiedTimeWeak type="a">7.11.2023::16:22:57</_modifiedTimeWeak>
+			<_modifiedTime type="a">7.11.2023::16:22:57</_modifiedTime>
+			<_lastID type="a">5</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
 					<value>16777215</value>
@@ -78,10 +133,6 @@
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
 			</Diagrams>
-			<ComponentDiagrams type="c">
-				<IRPYRawContainer type="e">
-				</IRPYRawContainer>
-			</ComponentDiagrams>
 			<mapOslcAddedCollections type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
@@ -94,6 +145,7 @@
 				<value>GUID d24d9192-bc4f-48a2-a4e1-fdaebbdfa6b6</value>
 				<value>GUID cf01d54c-f036-43d6-8a1e-d9d3cfd5b4b6</value>
 				<value>GUID dca1e643-3b13-42df-a6b7-0191bb3d7596</value>
+				<value>GUID de9bd686-0c1c-4d05-a50d-f079e3f5bb08</value>
 				<value>GUID 7d55683e-621b-4d12-9139-15b3a47d253b</value>
 			</AggregatesList>
 		</IProject>
@@ -110,6 +162,10 @@
 		<ISubsystem type="e">
 			<fileName type="a">Proteus</fileName>
 			<_id type="a">GUID dca1e643-3b13-42df-a6b7-0191bb3d7596</_id>
+		</ISubsystem>
+		<ISubsystem type="e">
+			<fileName type="a">StressTestExample</fileName>
+			<_id type="a">GUID de9bd686-0c1c-4d05-a50d-f079e3f5bb08</_id>
 		</ISubsystem>
 		<IComponent type="e">
 			<fileName type="a">DefaultComponent</fileName>
