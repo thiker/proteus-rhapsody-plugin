@@ -9,5 +9,5 @@ The ProteusDemo project contains an example with a connection to MQTT.
 For the plugin:
 1. Change the HEP file so that all absolute paths point are adapted to the directories on your system.
 2. Add the plugin to your ibm rhapsody project.
-2.1 Right click to get features of the project.
-2.2 Go to properties and filter for helpersfile. Then browse to the Proteus plugin's helpers file and select it.
+3. Right click to get features of the project.
+4 Go to properties and filter for helpersfile. Then browse to the Proteus plugin's helpers file and select it.
