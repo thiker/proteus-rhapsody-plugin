@@ -5,3 +5,7 @@ The ProteusDemo project contains an example with a connection to MQTT.
 3. on the default component set the libraries path to: ..\..\DefaultComponent\Eclipse-Paho-MQTT-C-1.3.12-win32\lib\paho-mqtt3c.lib
 4. on the default component set the include path to: ..\..\DefaultComponent\Eclipse-Paho-MQTT-C-1.3.12-win32\lib\paho-mqtt3c.lib
 5. for standard headers set MQTTClient.h to incldue the mqtt on all files.
+
+For the plugin:
+1. Change the HEP file so that all absolute paths point are adapted to the directories on your system.
+2. Add the plugin to your ibm rhapsody project.
