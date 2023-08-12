@@ -116,8 +116,8 @@
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
 								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">0</m_nFlags>
-								<m_showCmd type="a">1</m_showCmd>
+								<m_nFlags type="a">2</m_nFlags>
+								<m_showCmd type="a">3</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
@@ -138,18 +138,18 @@
 								<_hid type="a">GUID 6667cbe9-df0d-4018-ac49-fb5da0f84215</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">191 118 </_UpLeft>
-						<_DownRight type="a">967 422 </_DownRight>
+						<_UpLeft type="a">191 0 </_UpLeft>
+						<_DownRight type="a">1090 486 </_DownRight>
 						<m_nDiagramIndex type="a">3</m_nDiagramIndex>
-						<m_bIsActiveView type="a">0</m_bIsActiveView>
+						<m_bIsActiveView type="a">1</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 					<CGEMdiDiagramParams type="e">
 						<_placement type="p">
 							<CCommon_WINDOWPLACEMENT type="e">
 								<m_nLength type="a">44</m_nLength>
-								<m_nFlags type="a">2</m_nFlags>
-								<m_showCmd type="a">3</m_showCmd>
+								<m_nFlags type="a">0</m_nFlags>
+								<m_showCmd type="a">1</m_showCmd>
 								<m_ptMinPositionX type="a">-1</m_ptMinPositionX>
 								<m_ptMinPositionY type="a">-1</m_ptMinPositionY>
 								<m_ptMaxPositionX type="a">-8</m_ptMaxPositionX>
@@ -170,10 +170,10 @@
 								<_hid type="a">GUID 638f9b2c-b954-47d5-87c1-80a04e8c0981</_hid>
 							</IHandle>
 						</_theDiagram>
-						<_UpLeft type="a">18 0 </_UpLeft>
-						<_DownRight type="a">829 608 </_DownRight>
+						<_UpLeft type="a">0 0 </_UpLeft>
+						<_DownRight type="a">928 410 </_DownRight>
 						<m_nDiagramIndex type="a">0</m_nDiagramIndex>
-						<m_bIsActiveView type="a">1</m_bIsActiveView>
+						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 					<CGEMdiDiagramParams type="e">
@@ -395,7 +395,7 @@
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 38 </_UpLeft>
-						<_DownRight type="a">1614 651 </_DownRight>
+						<_DownRight type="a">1613 650 </_DownRight>
 						<m_nDiagramIndex type="a">7</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
@@ -491,14 +491,14 @@
 							</IHandle>
 						</_theDiagram>
 						<_UpLeft type="a">0 12 </_UpLeft>
-						<_DownRight type="a">1999 795 </_DownRight>
+						<_DownRight type="a">1998 794 </_DownRight>
 						<m_nDiagramIndex type="a">8</m_nDiagramIndex>
 						<m_bIsActiveView type="a">0</m_bIsActiveView>
 					</CGEMdiDiagramParams>
 					
 				</IRPYRawContainer>
 			</myViewsWithID>
-			<_fullName type="a">D:\Rhapsody\Projects\Proteus\Project</_fullName>
+			<_fullName type="a">Y:\github-projects\proteus-rhapsody-plugin\projects\Proteus\Project</_fullName>
 			<m_SearchScopeList type="c">
 				<IRPYRawContainer type="e">
 				</IRPYRawContainer>
