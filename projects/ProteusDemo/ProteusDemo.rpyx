@@ -29,7 +29,7 @@
 												
 												<IProperty type="e">
 													<_Name type="a">HelpersFile</_Name>
-													<_Value type="a">Y:\github-projects\proteus-rhapsody-plugin\proteus-plugin\ProteusPlugin.hep</_Value>
+													<_Value type="a">\\Mac\Coding\github-projects\proteus-rhapsody-plugin\proteus-plugin\ProteusPlugin.hep</_Value>
 													<_Type type="a">File</_Type>
 												</IProperty>
 												
@@ -67,8 +67,8 @@
 			</IPropertyContainer>
 			</_properties>
 			<_name type="a">ProteusDemo</_name>
-			<_modifiedTimeWeak type="a">7.11.2023::16:22:57</_modifiedTimeWeak>
-			<_modifiedTime type="a">7.11.2023::16:22:57</_modifiedTime>
+			<_modifiedTimeWeak type="a">8.12.2023::19:23:58</_modifiedTimeWeak>
+			<_modifiedTime type="a">8.12.2023::19:23:58</_modifiedTime>
 			<_lastID type="a">5</_lastID>
 			<_UserColors type="w">
 				<IRPYRawContainer type="e">
